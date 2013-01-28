@@ -2089,7 +2089,22 @@ function BasicDayView(element, calendar) {
 }
 
 setDefaults({
-	weekMode: 'fixed'
+	weekMode: 'fixed',
+	allDaySlot: true,
+    allDayText: 'all-day',
+    firstHour: 6,
+    slotMinutes: 30,
+    defaultEventMinutes: 120,
+    axisFormat: 'H', //,'h(:mm)tt',
+    timeFormat: {
+        agenda: 'H' //h:mm{ - h:mm}'
+    },
+    dragOpacity: {
+        agenda: .5
+    },
+    minTime: 0,
+    maxTime: 24
+
 });
 
 
