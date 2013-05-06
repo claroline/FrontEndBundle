@@ -1,43 +1,32 @@
 TinyMCE - The JavaScript Rich Text editor
 ==========================================
 
-Building TinyMCE
------------------
-1. Install Node.js
-2. Open a console and go to the project directory
-3. Write "npm install" to install all Node.js modules needed
-4. Build TinyMCE by writing "jake"
+What you need to build TinyMCE
+-------------------------------
+* Install the Java JDK or JRE packages you can find it at: [http://java.sun.com/javase/downloads/index.jsp](http://java.sun.com/javase/downloads/index.jsp)
+* Install Apache Ant you can find it at: [http://ant.apache.org/](http://ant.apache.org/)
+* Add Apache Ant to your systems path environment variable, this is not required but makes it easier to issue commands to Ant without having to type the full path for it.
 
-Build tasks
-------------
-`jake`
-Runs the minifyjs, less, jshint build tasks.
+How to build TinyMCE
+---------------------
 
-`jake -T`
-List all build tasks.
+In the root directory of TinyMCE where the build.xml file is you can run ant against different targets.
 
-`jake minify`
-Compiles the core classes, plugins and themes into minified versions.
+`ant`
 
-`jake less`
-Compiles all LESS based skins into css files that can be included in the browser.
+Will combine, preprocess and minify the TinyMCE classes into tiny_mce.js and tiny_mce_src.js and it's jQuery variant.
 
-`jake jshint`
-Runs all js code though jshint.
+`ant moxiedoc`
 
-`jake release`
-Builds release packages with the version specified in changelog.txt.
+Will generate API Documentation for the project using the Moxiedoc tool. The docs will be generated to the docs/api directory.
 
-`jake bundle-themes`
-Bundles themes into the tinymce core js files.
+`ant release`
 
-`jake bundle-plugins`
-Bundles plugins into the tinymce core js files.
+Will produce an release package of the current repository code. The release packages will be placed in the tmp directory.
 
-Bundle themes and plugins into core example
--------------------------------------------
-`jake minify bundle-themes[modern] bundle-plugins[table,paste]`
-Minifies the core, adds the modern theme and adds the table and paste plugin into tinymce.min.js.
+`ant release -Dnomoxiedoc=true`
+
+Same as above, but don't generate API Documentation.
 
 Contributing to the TinyMCE project
 ------------------------------------
