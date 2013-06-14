@@ -123,8 +123,8 @@
     var daysInMonths = [31,28,31,30,31,30,31,30,31,30,31,30];
     // array of consistent nice intervals.  Longer intervals
     // will depend on days in month, days in year, etc.
-    var niceFormatStrings = ['%M:%S.%#N', '%M:%S.%#N', '%M:%S.%#N', '%M:%S', '%M:%S', '%M:%S', '%M:%S', '%H:%M:%S', '%H:%M:%S', '%H:%M', '%H:%M', '%H:%M', '%H:%M', '%H:%M', '%H:%M', '%a %H:%M', '%a %H:%M', '%b %e %H:%M', '%b %e %H:%M', '%b %e %H:%M', '%b %e %H:%M', '%v', '%v', '%v', '%v', '%v', '%v', '%v'];
-    var niceIntervals = [0.1*second, 0.2*second, 0.5*second, second, 2*second, 5*second, 10*second, 15*second, 30*second, minute, 2*minute, 5*minute, 10*minute, 15*minute, 30*minute, hour, 2*hour, 4*hour, 6*hour, 8*hour, 12*hour, day, 2*day, 3*day, 4*day, 5*day, week, 2*week];
+    var niceFormatStrings = ['%v', '%v', '%v', '%v', '%v', '%v', '%v','%v','%v', '%v', '%v', '%v','%v','%v', '%v', '%v', '%v','%v','%v', '%v', '%v', '%v', '%v','%v','%v', '%v', '%v', '%v'];
+    var niceIntervals = [day, 2*day, 3*day, 4*day, 5*day, 6*day, week, 8*day, 9*day, 10*day, 11*day, 12*day, 13*day, 2*week, 15*day, 16*day, 17*day, 18*day, 19*day, 20*day, 3*week, 22*day, 23*day, 24*day, 25*day, 26*day, 27*day, 4*week];
 
     var niceMonthlyIntervals = [];
 
@@ -335,7 +335,7 @@
         var threshold = 30;
         var insetMult = 1;
         var daTickInterval = null;
-        
+        var tickLabels = [];
         // if user specified a tick interval, convert to usable.
         if (this.tickInterval != null)
         {
@@ -396,7 +396,11 @@
                         t.showMark = false;
                     }
                     t.setTick(t.value, this.name);
-                    this._ticks.push(t);
+                    var tickLabel = t.getLabel();
+                    if($.inArray(tickLabel, tickLabels)==-1){
+                        this._ticks.push(t);
+                        tickLabels.push(tickLabel);
+                    }
                 }
                 
                 else {
@@ -409,7 +413,11 @@
                         t.showMark = false;
                     }
                     t.setTick(t.value, this.name);
-                    this._ticks.push(t);
+                    var tickLabel = t.getLabel();
+                    if($.inArray(tickLabel, tickLabels)==-1){
+                        this._ticks.push(t);
+                        tickLabels.push(tickLabel);
+                    }
                 }
             }
             this.numberTicks = userTicks.length;
@@ -444,7 +452,11 @@
                  t.showLabel = false;
                  t.showMark = false;
 
-                 this._ticks.push(t);
+                var tickLabel = t.getLabel();
+                if($.inArray(tickLabel, tickLabels)==-1){
+                    this._ticks.push(t);
+                    tickLabels.push(tickLabel);
+                }
              }
 
              if(this.showTicks) {
@@ -492,22 +504,32 @@
             // Not guaranteed, but will try to get close.
             else if (this.numberTicks) {
                 nttarget = this.numberTicks;
-                titarget = (max - min) / (nttarget - 1);
+                titarget = (max - min) / (Math.max(1,nttarget - 1));
             }
 
             // If we can use an interval of 2 weeks or less, pick best one
-            if (titarget <= 19*day) {
+            if (titarget <= 27*day) {
                 var ret = bestDateInterval(min, max, titarget);
                 var tempti = ret[0];
                 this._autoFormatString = ret[1];
 
-                min = new $.jsDate(min);
-                min = Math.floor((min.getTime() - min.getUtcOffset())/tempti) * tempti + min.getUtcOffset();
+                
+                //min = new $.jsDate(min);
+                //min = Math.floor((min.getTime() - min.getUtcOffset())/tempti) * tempti + min.getUtcOffset();
+                min = new $.jsDate(min).setHours(0,0,0,0);
+                min = min.getTime();
 
                 nttarget = Math.ceil((max - min) / tempti) + 1;
                 this.min = min;
                 this.max = min + (nttarget - 1) * tempti;
 
+                //if extra intervals then:
+                var maxDiff = this.max-max;
+                var maxDiffIntervals = Math.floor(maxDiff/tempti);
+                if(maxDiff>0 && maxDiffIntervals>0){
+                    this.max -= maxDiffIntervals*tempti;
+                    nttarget -= maxDiffIntervals*1;
+                }
                 // if max is less than max, add an interval
                 if (this.max < max) {
                     this.max += tempti;
@@ -530,14 +552,18 @@
                     else if (!this.showTickMarks) {
                         t.showMark = false;
                     }
-                    this._ticks.push(t);
+                    var tickLabel = t.getLabel();
+                    if($.inArray(tickLabel, tickLabels)==-1){
+                        this._ticks.push(t);
+                        tickLabels.push(tickLabel);
+                    }
                 }
 
                 insetMult = this.tickInterval;
             }
 
             // should we use a monthly interval?
-            else if (titarget <= 9 * month) {
+            else if (titarget <= 11 * month) {
 
                 this._autoFormatString = '%v';
 
@@ -546,9 +572,9 @@
                 if (intv < 1) {
                     intv = 1;
                 }
-                else if (intv > 6) {
+                /*else if (intv > 6) {
                     intv = 6;
-                }
+                }*/
 
                 // figure out the starting month and ending month.
                 var mstart = new $.jsDate(min).setDate(1).setHours(0,0,0,0);
@@ -561,7 +587,7 @@
                     mend = mend.add(1, 'month');
                 }
 
-                var nmonths = mend.diff(mstart, 'month');
+                var nmonths = mend.diff(mstart.getTime(), 'month');
 
                 nttarget = Math.ceil(nmonths/intv) + 1;
 
@@ -588,7 +614,11 @@
                     else if (!this.showTickMarks) {
                         t.showMark = false;
                     }
-                    this._ticks.push(t);
+                    var tickLabel = t.getLabel();
+                    if($.inArray(tickLabel, tickLabels)==-1){
+                        this._ticks.push(t);
+                        tickLabels.push(tickLabel);
+                    }
                 }
 
                 insetMult = intv * month;
@@ -609,7 +639,7 @@
                 var mstart = new $.jsDate(min).setMonth(0, 1).setHours(0,0,0,0);
                 var mend = new $.jsDate(max).add(1, 'year').setMonth(0, 1).setHours(0,0,0,0);
 
-                var nyears = mend.diff(mstart, 'year');
+                var nyears = mend.diff(mstart.getTime(), 'year');
 
                 nttarget = Math.ceil(nyears/intv) + 1;
 
@@ -636,11 +666,15 @@
                     else if (!this.showTickMarks) {
                         t.showMark = false;
                     }
-                    this._ticks.push(t);
+                    var tickLabel = t.getLabel();
+                    if($.inArray(tickLabel, tickLabels)==-1){
+                        this._ticks.push(t);
+                        tickLabels.push(tickLabel);
+                    }
                 }
 
                 insetMult = intv * year;
-            }
+            }            
         }
 
         ////////
@@ -721,7 +755,11 @@
                     t.showMark = false;
                 }
                 t.setTick(tt, this.name);
-                this._ticks.push(t);
+                var tickLabel = t.getLabel();
+                if($.inArray(tickLabel, tickLabels)==-1){
+                    this._ticks.push(t);
+                    tickLabels.push(tickLabel);
+                }
             }
         }
 
@@ -733,8 +771,8 @@
         if (this._daTickInterval == null) {
             this._daTickInterval = this.daTickInterval;    
         }
-
         ticks = null;
+        tickLabels = [];
     };
    
 })(jQuery);

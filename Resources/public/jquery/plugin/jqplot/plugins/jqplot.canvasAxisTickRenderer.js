@@ -195,7 +195,10 @@
         var a = this.angle * Math.PI/180;
         return a;
     };
-    
+
+    $.jqplot.CanvasAxisTickRenderer.prototype.getLabel = function() {
+        return this.prefix + this.formatter(this.formatString, this.value);
+    };    
     
     $.jqplot.CanvasAxisTickRenderer.prototype.setTick = function(value, axisName, isMinor) {
         this.value = value;
