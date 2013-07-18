@@ -25,7 +25,7 @@
 		/*
 	     * RegExp, extend this if you need more players
 	     */
-		players = /www.youtube.com|player.vimeo.com/;
+		players = /www.youtube.com|player.vimeo.com|slideshare.net/;
 
 		/*
 		 * If the RegExp pattern exists within the current iframe
