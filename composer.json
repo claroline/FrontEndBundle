@@ -10,5 +10,4 @@
         "psr-0": { "Claroline\\Bundle\\FrontEndBundle": "" }
     },
     "target-dir": "Claroline/Bundle/FrontEndBundle",
-    "minimum-stability": "dev"
 }
