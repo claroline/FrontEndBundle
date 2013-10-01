@@ -28,7 +28,6 @@ ul.jquery-sortable-list li {
 ul.jquery-sortable-list li.placeholder {
     position: relative;
     margin: 0;
-    margin-top:-3px;
     padding: 0;
     border: none; 
     border-top: 1px dotted #428BCA;
