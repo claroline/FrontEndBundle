@@ -1,6 +1,7 @@
 {
     "name": "claroline/front-end-bundle",
     "description": "Front-end dependencies bundle for Claroline 2.0",
+    "license": "GPL-3.0+",
     "require": {
         "php": ">=5.3.3",
         "symfony/framework-bundle": "~2.0",
