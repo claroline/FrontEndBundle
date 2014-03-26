@@ -1,0 +1,22 @@
+.rte-autocomplete > li > a {
+    display: block;
+    padding: 3px 5px;
+    clear: both;
+    font-weight: normal;
+    line-height: 20px;
+    color: #333;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.rte-autocomplete > li > a > .user-picker-dropdown-avatar {
+    display: inline-block;
+    max-height: 20px;
+    font-size: 16px;
+    width: 20px;
+}
+
+.rte-autocomplete > li > a > .user-picker-dropdown-avatar > img {
+    max-height: inherit;
+    width: inherit;
+}
