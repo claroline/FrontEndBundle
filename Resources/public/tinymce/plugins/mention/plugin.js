@@ -33,9 +33,9 @@
 
         renderInput: function () {
             var rawHtml =  '<span id="autocomplete">' +
-                                '<span id="autocomplete-delimiter">' + this.options.delimiter + '</span>' +
-                                '<span id="autocomplete-searchtext"><span class="dummy">\uFEFF</span></span>' +
-                            '</span>';
+                '<span id="autocomplete-delimiter">' + this.options.delimiter + '</span>' +
+                '<span id="autocomplete-searchtext"><span class="dummy">\uFEFF</span></span>' +
+                '</span>';
 
             this.editor.execCommand('mceInsertContent', false, rawHtml);
             this.editor.focus();
@@ -66,75 +66,75 @@
 
         rteKeyUp: function (e) {
             switch (e.which || e.keyCode) {
-            //DOWN ARROW
-            case 40:
-            //UP ARROW
-            case 38:
-            //SHIFT
-            case 16:
-            //CTRL
-            case 17:
-            //ALT
-            case 18:
-                break;
+                //DOWN ARROW
+                case 40:
+                //UP ARROW
+                case 38:
+                //SHIFT
+                case 16:
+                //CTRL
+                case 17:
+                //ALT
+                case 18:
+                    break;
 
-            //BACKSPACE
-            case 8:
-                if (this.query === '') {
+                //BACKSPACE
+                case 8:
+                    if (this.query === '') {
+                        this.cleanUp(true);
+                    } else {
+                        this.lookup();
+                    }
+                    break;
+
+                //TAB
+                case 9:
+                //ENTER
+                case 13:
+                    var item = (this.$dropdown !== undefined) ? this.$dropdown.find('li.active') : [];
+                    if (item.length) {
+                        this.select(item.data());
+                        this.cleanUp(false);
+                    } else {
+                        this.cleanUp(true);
+                    }
+                    break;
+
+                //ESC
+                case 27:
                     this.cleanUp(true);
-                } else {
+                    break;
+
+                default:
                     this.lookup();
-                }
-                break;
-
-            //TAB
-            case 9:
-            //ENTER
-            case 13:
-                var item = (this.$dropdown !== undefined) ? this.$dropdown.find('li.active') : [];
-                if (item.length) {
-                    this.select(item.data());
-                    this.cleanUp(false);
-                } else {
-                    this.cleanUp(true);
-                }
-                break;
-
-            //ESC
-            case 27:
-                this.cleanUp(true);
-                break;
-
-            default:
-                this.lookup();
             }
         },
 
         rteKeyDown: function (e) {
             switch (e.which || e.keyCode) {
-             //TAB
-            case 9:
-            //ENTER
-            case 13:
-            //ESC
-            case 27:
-                e.preventDefault();
-                break;
+                //TAB
+                case 9:
+                //ENTER
+                case 13:
+                //ESC
+                case 27:
+                    e.preventDefault();
+                    break;
 
-            //UP ARROW
-            case 38:
-                e.preventDefault();
-                if (this.$dropdown !== undefined) {
-                    this.highlightPreviousResult();
-                }
-                break;
-            //DOWN ARROW
-            case 40:
-                e.preventDefault();
-                if (this.$dropdown !== undefined) {
-                    this.highlightNextResult();
-                }
-                break;
+                //UP ARROW
+                case 38:
+                    e.preventDefault();
+                    if (this.$dropdown !== undefined) {
+                        this.highlightPreviousResult();
+                    }
+                    break;
+                //DOWN ARROW
+                case 40:
+                    e.preventDefault();
+                    if (this.$dropdown !== undefined) {
+                        this.highlightNextResult();
+                    }
+                    break;
             }
 
             e.stopPropagation();
@@ -208,7 +208,7 @@
                 left = rtePosition.left + contentAreaPosition.left + nodePosition.left;
 
             this.$dropdown = $(this.renderDropdown())
-                                .css({ 'top': top, 'left': left });
+                .css({ 'top': top, 'left': left });
 
             $('body').append(this.$dropdown);
 
@@ -255,8 +255,8 @@
 
         render: function (item) {
             return '<li>' +
-                        '<a href="javascript:;"><span>' + item.name + '</span></a>' +
-                    '</li>';
+                '<a href="javascript:;"><span>' + item.name + '</span></a>' +
+                '</li>';
         },
 
         autoCompleteClick: function (e) {
@@ -284,6 +284,7 @@
         },
 
         select: function (item) {
+            this.editor.focus();
             var selection = this.editor.dom.select('span#autocomplete')[0];
             this.editor.dom.remove(selection);
             this.editor.execCommand('mceInsertContent', false, this.insert(item) + '&nbsp;');
@@ -331,15 +332,17 @@
             autoCompleteData.delimiter = (autoCompleteData.delimiter !== undefined) ? !$.isArray(autoCompleteData.delimiter) ? [autoCompleteData.delimiter] : autoCompleteData.delimiter : ['@'];
 
             function prevCharIsSpace() {
-                var $node = $(ed.selection.getNode().outerHTML),
-                    text = $node.text(),
-                    charachter = text.substr(text.length - 1, 1);
+                var isLink = $(ed.selection.getNode()).is('a'),
+                    start = ed.selection.getRng().startOffset,
+                    text = ed.selection.getRng().startContainer.textContent,
+                    charachter = text.substr(start - 1, 1);
 
-                return (!!$.trim(charachter).length) ? false : true;
+                return (isLink || !!$.trim(charachter).length) ? false : true;
             }
 
             ed.on('keypress', function (e) {
                 var delimiterIndex = $.inArray(String.fromCharCode(e.which || e.keyCode), autoCompleteData.delimiter);
+
                 if (delimiterIndex > -1 && prevCharIsSpace()) {
                     if (autoComplete === undefined || (autoComplete.hasFocus !== undefined && !autoComplete.hasFocus)) {
                         e.preventDefault();
