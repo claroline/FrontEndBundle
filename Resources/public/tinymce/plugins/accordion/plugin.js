@@ -44,8 +44,16 @@ tinymce.PluginManager.add('accordion', function(editor) {
                     editor.insertContent(htmlAccordion);
                     var panelElt = editor.dom.get(id);
                     var accordionElt = editor.dom.getParent(panelElt, 'div[data-mce-type=accordion]');
-                    selection.select(accordionElt);
-                    selection.collapse();
+                    var nextElt = editor.dom.getNext(accordionElt, '*');
+
+                    if(nextElt==null) {
+                        editor.dom.add(editor.getBody(), 'p','','&nbsp;');
+                        nextElt = editor.dom.getNext(accordionElt, '*');
+                    }
+                    var range = document.createRange();
+                    range.setStart(nextElt, 0);
+                    range.setEnd(nextElt, 0);
+                    selection.setRng(range);
                 }
             }
         });
