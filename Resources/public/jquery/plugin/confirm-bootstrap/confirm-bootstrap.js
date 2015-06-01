@@ -29,10 +29,10 @@
             confirmCancel    : 'Cancel',
             confirmDirection : 'rtl',
             confirmStyle     : 'primary',
-            confirmCallback  : defaultCallback
+            confirmCallback  : defaultCallback,
+            confirmDismiss   : true
         };
         var options = $.extend(defaultOptions, opts);
-        var time    = Date.now();
 
         var headModalTemplate =
             '<div class="modal fade" id="#modalId#" tabindex="-1" role="dialog" aria-labelledby="#AriaLabel#" aria-hidden="true">' +
@@ -60,7 +60,7 @@
 
             var currentOptions = $.extend(options, targetData);
 
-            var modalId = "confirmModal" + parseInt(time + index);
+            var modalId = "confirmModal" + Math.floor(Math.random()*(1e+9));
             var modalTemplate = headModalTemplate;
             var buttonTemplate =
                 '<button class="btn btn-default" data-dismiss="modal">#Cancel#</button>' +
@@ -75,12 +75,24 @@
                 ;
             }
 
+            var confirmTitle = options.confirmTitle;
+            if(typeof options.confirmTitle == 'function')
+            {
+                confirmTitle = options.confirmTitle.call(this);
+            }
+
+            var confirmMessage = options.confirmMessage;
+            if(typeof options.confirmMessage == 'function')
+            {
+                confirmMessage = options.confirmMessage.call(this);
+            }
+
             modalTemplate = modalTemplate.
                 replace('#buttonTemplate#', buttonTemplate).
                 replace('#modalId#', modalId).
-                replace('#AriaLabel#', options.confirmTitle).
-                replace('#Heading#', options.confirmTitle).
-                replace('#Body#', options.confirmMessage).
+                replace('#AriaLabel#', confirmTitle).
+                replace('#Heading#', confirmTitle).
+                replace('#Body#', confirmMessage).
                 replace('#Ok#', options.confirmOk).
                 replace('#Cancel#', options.confirmCancel).
                 replace('#Style#', options.confirmStyle)
@@ -97,12 +109,14 @@
             });
 
             $('button[data-dismiss="ok"]', confirmModal).on('click', function(event) {
-                confirmModal.modal('hide');
-                options.confirmCallback(confirmLink);
+                if (options.confirmDismiss) {
+                    confirmModal.modal('hide');
+                }
+                options.confirmCallback(confirmLink, confirmModal);
             });
         });
 
-        function defaultCallback(target)
+        function defaultCallback(target, modal)
         {
             window.location = $(target).attr('href');
         }
