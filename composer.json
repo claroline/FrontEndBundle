@@ -1,6 +1,6 @@
 {
     "name": "claroline/front-end-bundle",
-    "description": "Front-end dependencies bundle for Claroline 2.0",
+    "description": "Front-end dependencies bundle for Claroline Connect",
     "license": "GPL-3.0+",
     "require": {
         "php": ">=5.3.3",
