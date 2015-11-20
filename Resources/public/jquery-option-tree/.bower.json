@@ -1,0 +1,11 @@
+{
+  "name": "jquery-option-tree",
+  "_cacheHeaders": {
+    "Content-Type": "text/html; charset=utf-8"
+  },
+  "main": "index",
+  "_source": "https://github.com/jongilbraith/jquery-option-tree",
+  "_target": "*",
+  "_originalSource": "https://github.com/jongilbraith/jquery-option-tree",
+  "_direct": true
+}
