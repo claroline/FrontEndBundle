@@ -31,6 +31,9 @@
     "sinon": "~1.17.2",
     "system.js": "~0.19.6",
     "underscore": "~1.8.3",
-    "moment": "~2.10.6"
+    "moment": "~2.10.6",
+    "tinymceMentionPlugin": "https://github.com/iCAPLyon1/tinymceMentionPlugin",
+    "tinymceAccordionPlugin": "https://github.com/iCAPLyon1/tinymceAccordionPlugin",
+    "tinymce-codemirror": "https://github.com/christiaan/tinymce-codemirror"
   }
 }
