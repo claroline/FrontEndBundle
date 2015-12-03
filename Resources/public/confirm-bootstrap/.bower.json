@@ -1,0 +1,11 @@
+{
+  "name": "confirm-bootstrap",
+  "_cacheHeaders": {
+    "Content-Type": "text/html; charset=utf-8"
+  },
+  "main": "index",
+  "_source": "https://github.com/maxailloud/confirm-bootstrap",
+  "_target": "*",
+  "_originalSource": "https://github.com/maxailloud/confirm-bootstrap",
+  "_direct": true
+}
