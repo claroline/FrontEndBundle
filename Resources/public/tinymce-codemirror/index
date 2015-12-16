@@ -1,0 +1,1004 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=1020">
+    
+    
+    <title>christiaan/tinymce-codemirror · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="christiaan/tinymce-codemirror" name="twitter:title" /><meta content="tinymce-codemirror - CodeMirror for TinyMCE 4" name="twitter:description" /><meta content="https://avatars2.githubusercontent.com/u/118490?v=3&amp;s=400" name="twitter:image:src" />
+      <meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars2.githubusercontent.com/u/118490?v=3&amp;s=400" property="og:image" /><meta content="christiaan/tinymce-codemirror" property="og:title" /><meta content="https://github.com/christiaan/tinymce-codemirror" property="og:url" /><meta content="tinymce-codemirror - CodeMirror for TinyMCE 4" property="og:description" />
+      <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    
+    <meta name="pjax-timeout" content="1000">
+    
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_source" data-pjax-transient>
+
+    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="C1BF0212:395D:14099C4:5660561C" name="octolytics-dimension-request_id" />
+<meta content="/&lt;user-name&gt;/&lt;repo-name&gt;" data-pjax-transient="true" name="analytics-location" />
+<meta content="Rails, view, files#disambiguate" data-pjax-transient="true" name="analytics-event" />
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged Out">
+    <meta class="js-ga-set" name="dimension4" content="New repo nav">
+
+
+
+
+        <meta name="hostname" content="github.com">
+    <meta name="user-login" content="">
+
+        <meta name="expected-hostname" content="github.com">
+
+      <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#4078c0">
+      <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+    <meta content="620b6457c3da8b0a9f59f294e64892f59634389a" name="form-nonce" />
+
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-d7e0b0c4fd7711345cdfc8fa9695541f6b64640cfc5897e9ea2337eba685ec9c.css" media="all" rel="stylesheet" />
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github2-a2501013b84e6062c9171a31d4fdb2225390126ddc5d8453188bc41b2a82ce18.css" media="all" rel="stylesheet" />
+    
+    
+    
+
+
+    <meta http-equiv="x-pjax-version" content="eb69116aa48ed68be3ac711fb834f27e">
+
+      
+  <meta name="description" content="tinymce-codemirror - CodeMirror for TinyMCE 4">
+  <meta name="go-import" content="github.com/christiaan/tinymce-codemirror git https://github.com/christiaan/tinymce-codemirror.git">
+
+  <meta content="118490" name="octolytics-dimension-user_id" /><meta content="christiaan" name="octolytics-dimension-user_login" /><meta content="46276709" name="octolytics-dimension-repository_id" /><meta content="christiaan/tinymce-codemirror" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="46276709" name="octolytics-dimension-repository_network_root_id" /><meta content="christiaan/tinymce-codemirror" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/christiaan/tinymce-codemirror/commits/master.atom" rel="alternate" title="Recent Commits to tinymce-codemirror:master" type="application/atom+xml">
+
+  </head>
+
+
+  <body class="logged_out   env-production  vis-public">
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+
+    
+    
+    
+
+
+
+      
+      <div class="header header-logged-out" role="banner">
+  <div class="container clearfix">
+
+    <a class="header-logo-wordmark" href="https://github.com/" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+      <span class="mega-octicon octicon-logo-github"></span>
+    </a>
+
+    <div class="header-actions" role="navigation">
+        <a class="btn btn-primary" href="/join" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a>
+      <a class="btn" href="/login?return_to=%2Fchristiaan%2Ftinymce-codemirror" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a>
+    </div>
+
+    <div class="site-search repo-scope js-site-search" role="search">
+      <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/christiaan/tinymce-codemirror/search" class="js-site-search-form" data-global-search-url="/search" data-repo-search-url="/christiaan/tinymce-codemirror/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+  <label class="js-chromeless-input-container form-control">
+    <div class="scope-badge">This repository</div>
+    <input type="text"
+      class="js-site-search-focus js-site-search-field is-clearable chromeless-input"
+      data-hotkey="s"
+      name="q"
+      placeholder="Search"
+      aria-label="Search this repository"
+      data-global-scope-placeholder="Search GitHub"
+      data-repo-scope-placeholder="Search"
+      tabindex="1"
+      autocapitalize="off">
+  </label>
+</form>
+    </div>
+
+      <ul class="header-nav left" role="navigation">
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/explore" data-ga-click="(Logged out) Header, go to explore, text:explore">Explore</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/features" data-ga-click="(Logged out) Header, go to features, text:features">Features</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://enterprise.github.com/" data-ga-click="(Logged out) Header, go to enterprise, text:enterprise">Enterprise</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/pricing" data-ga-click="(Logged out) Header, go to pricing, text:pricing">Pricing</a>
+          </li>
+      </ul>
+
+  </div>
+</div>
+
+
+
+    <div id="start-of-content" class="accessibility-aid"></div>
+
+    <div id="js-flash-container">
+</div>
+
+
+    <div role="main" class="main-content">
+        <div itemscope itemtype="http://schema.org/WebPage">
+    <div id="js-repo-pjax-container" class="context-loader-container js-repo-nav-next" data-pjax-container>
+      
+<div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav">
+  <div class="container repohead-details-container">
+
+    
+
+<ul class="pagehead-actions">
+
+  <li>
+      <a href="/login?return_to=%2Fchristiaan%2Ftinymce-codemirror"
+    class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to watch a repository" rel="nofollow">
+    <span class="octicon octicon-eye"></span>
+    Watch
+  </a>
+  <a class="social-count" href="/christiaan/tinymce-codemirror/watchers">
+    2
+  </a>
+
+  </li>
+
+  <li>
+      <a href="/login?return_to=%2Fchristiaan%2Ftinymce-codemirror"
+    class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to star a repository" rel="nofollow">
+    <span class="octicon octicon-star"></span>
+    Star
+  </a>
+
+    <a class="social-count js-social-count" href="/christiaan/tinymce-codemirror/stargazers">
+      1
+    </a>
+
+  </li>
+
+  <li>
+      <a href="/login?return_to=%2Fchristiaan%2Ftinymce-codemirror"
+        class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+        aria-label="You must be signed in to fork a repository" rel="nofollow">
+        <span class="octicon octicon-repo-forked"></span>
+        Fork
+      </a>
+
+    <a href="/christiaan/tinymce-codemirror/network" class="social-count">
+      2
+    </a>
+  </li>
+</ul>
+
+    <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public ">
+  <span class="octicon octicon-repo"></span>
+  <span class="author"><a href="/christiaan" class="url fn" itemprop="url" rel="author"><span itemprop="title">christiaan</span></a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong><a href="/christiaan/tinymce-codemirror" data-pjax="#js-repo-pjax-container">tinymce-codemirror</a></strong>
+
+  <span class="page-context-loader">
+    <img alt="" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+  </span>
+
+</h1>
+
+  </div>
+  <div class="container">
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax js-octicon-loaders"
+     role="navigation"
+     data-pjax="#js-repo-pjax-container"
+     data-issue-count-url="/christiaan/tinymce-codemirror/issues/counts">
+
+  <a href="/christiaan/tinymce-codemirror" aria-label="Code" aria-selected="true" class="js-selected-navigation-item selected reponav-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /christiaan/tinymce-codemirror">
+    <span class="octicon octicon-code"></span>
+    Code
+</a>
+    <a href="/christiaan/tinymce-codemirror/issues" class="js-selected-navigation-item reponav-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /christiaan/tinymce-codemirror/issues">
+      <span class="octicon octicon-issue-opened"></span>
+      Issues
+      <span class="counter">3</span>
+
+</a>
+  <a href="/christiaan/tinymce-codemirror/pulls" class="js-selected-navigation-item reponav-item" data-hotkey="g p" data-selected-links="repo_pulls /christiaan/tinymce-codemirror/pulls">
+    <span class="octicon octicon-git-pull-request"></span>
+    Pull requests
+    <span class="counter">0</span>
+
+</a>
+
+  <a href="/christiaan/tinymce-codemirror/pulse" class="js-selected-navigation-item reponav-item" data-selected-links="pulse /christiaan/tinymce-codemirror/pulse">
+    <span class="octicon octicon-pulse"></span>
+    Pulse
+</a>
+  <a href="/christiaan/tinymce-codemirror/graphs" class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors /christiaan/tinymce-codemirror/graphs">
+    <span class="octicon octicon-graph"></span>
+    Graphs
+</a>
+
+</nav>
+
+  </div>
+</div>
+
+<div class="container repo-container new-discussion-timeline experiment-repo-nav">
+  <div class="repository-content">
+
+    
+<span id="js-show-full-navigation"></span>
+
+  <div class="repository-meta js-details-container">
+  <span class="repository-meta-content">
+        CodeMirror for TinyMCE 4
+  </span>
+
+</div>
+
+
+<div class="overall-summary overall-summary-bottomless">
+
+  <div class="stats-switcher-viewport js-stats-switcher-viewport">
+    <div class="stats-switcher-wrapper">
+    <ul class="numbers-summary">
+      <li class="commits">
+        <a data-pjax href="/christiaan/tinymce-codemirror/commits/master">
+            <span class="octicon octicon-history"></span>
+            <span class="num text-emphasized">
+              1
+            </span>
+            commit
+        </a>
+      </li>
+      <li>
+        <a data-pjax href="/christiaan/tinymce-codemirror/branches">
+          <span class="octicon octicon-git-branch"></span>
+          <span class="num text-emphasized">
+            1
+          </span>
+          branch
+        </a>
+      </li>
+
+      <li>
+        <a data-pjax href="/christiaan/tinymce-codemirror/releases">
+          <span class="octicon octicon-tag"></span>
+          <span class="num text-emphasized">
+            1
+          </span>
+          release
+        </a>
+      </li>
+
+      <li>
+        
+  <a href="/christiaan/tinymce-codemirror/graphs/contributors">
+    <span class="octicon octicon-organization"></span>
+    <span class="num text-emphasized">
+      1
+    </span>
+    contributor
+  </a>
+      </li>
+    </ul>
+
+      <div class="repository-lang-stats">
+        <ol class="repository-lang-stats-numbers">
+          <li>
+              <a href="/christiaan/tinymce-codemirror/search?l=javascript">
+                <span class="color-block language-color" style="background-color:#f1e05a;"></span>
+                <span class="lang">JavaScript</span>
+                <span class="percent">69.6%</span>
+              </a>
+          </li>
+          <li>
+              <a href="/christiaan/tinymce-codemirror/search?l=html">
+                <span class="color-block language-color" style="background-color:#e44b23;"></span>
+                <span class="lang">HTML</span>
+                <span class="percent">27.8%</span>
+              </a>
+          </li>
+          <li>
+              <a href="/christiaan/tinymce-codemirror/search?l=css">
+                <span class="color-block language-color" style="background-color:#563d7c;"></span>
+                <span class="lang">CSS</span>
+                <span class="percent">2.5%</span>
+              </a>
+          </li>
+          <li>
+              <span class="other">
+                <span class="color-block language-color" style="background-color:#ededed;"></span>
+                <span class="lang">Other</span>
+                <span class="percent">0.1%</span>
+              </span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <div class="repository-lang-stats-graph js-toggle-lang-stats" title="Click for language details">
+    <span class="language-color" aria-label="JavaScript 69.6%" style="width:69.6%; background-color:#f1e05a;" itemprop="keywords">JavaScript</span>
+    <span class="language-color" aria-label="HTML 27.8%" style="width:27.8%; background-color:#e44b23;" itemprop="keywords">HTML</span>
+    <span class="language-color" aria-label="CSS 2.5%" style="width:2.5%; background-color:#563d7c;" itemprop="keywords">CSS</span>
+    <span class="language-color" aria-label="Other 0.1%" style="width:0.1%; background-color:#ededed;" itemprop="keywords">Other</span>
+  </div>
+
+<include-fragment src="/christiaan/tinymce-codemirror/show_partial?partial=tree%2Frecently_touched_branches_list"></include-fragment>
+
+  <div class="file-navigation in-mid-page file-navigation-new">
+  <div class="right">
+    <div class="btn-group">
+      
+  <button class="btn btn-sm disabled tooltipped tooltipped-n" aria-label="You must be signed in to make or propose changes" type="button">
+    New file
+  </button>
+
+
+
+      <a href="/christiaan/tinymce-codemirror/find/master"
+        class="btn btn-sm empty-icon right js-show-file-finder"
+        data-pjax
+        data-hotkey="t"
+        data-ga-click="Repository, find file, location:repo overview">
+        Find file
+      </a>
+    </div>
+      <div class="file-navigation-options" data-multiple>
+
+        <div class="file-navigation-option">
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/users/set_protocol" class="js-set-user-protocol-preference" data-form-nonce="620b6457c3da8b0a9f59f294e64892f59634389a" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="FTAzgP3Tp6tHx9tVXPLCp2BxIqYJLyULb8zRJ8gADaMzlnEmVAiZAqoIoMcIGe+ofISfBGixDQ0BCuMked9WFg==" /></div>
+            <input type="hidden" name="protocol_type" value="clone">
+
+            <div class="select-menu js-menu-container js-select-menu">
+              <div class="input-group js-select-button js-zeroclipboard-container">
+                <div class="input-group-button">
+  <button type="button" class="btn btn-sm select-menu-button js-menu-target" data-ga-click="Repository, clone HTTPS, location:repo overview">
+    HTTPS
+  </button>
+</div>
+<input type="text" class="input-monospace input-mini js-zeroclipboard-target js-url-field" value="https://github.com/christiaan/tinymce-codemirror.git" readonly>
+<div class="input-group-button">
+  <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+</div>
+
+              </div>
+
+              <div class="select-menu-modal-holder">
+                <div class="select-menu-modal js-menu-content" aria-hidden="true">
+                  <div class="select-menu-header">
+                    <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+                    <span class="select-menu-title">Choose a clone URL</span>
+                  </div>
+
+                  <div class="select-menu-list js-navigation-container" role="menu">
+                      <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+                        <span class="select-menu-item-icon octicon octicon-check"></span>
+                        <div class="select-menu-item-text">
+                          <input type="radio" name="protocol_selector" value="http" checked>
+                          <span class="select-menu-item-heading">
+                            HTTPS
+                            (recommended)
+                          </span>
+                            <span class="description">
+                              Clone with Git or checkout with SVN using the repository's web address.
+                            </span>
+                          <span class="js-select-button-text hidden-select-button-text">
+                            <div class="input-group-button">
+  <button type="button" class="btn btn-sm select-menu-button js-menu-target" data-ga-click="Repository, clone HTTPS, location:repo overview">
+    HTTPS
+  </button>
+</div>
+<input type="text" class="input-monospace input-mini js-zeroclipboard-target js-url-field" value="https://github.com/christiaan/tinymce-codemirror.git" readonly>
+<div class="input-group-button">
+  <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+</div>
+
+                          </span>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="select-menu-list" role="menu">
+                    <a class="select-menu-item select-menu-action" href="https://help.github.com/articles/which-remote-url-should-i-use" target="_blank">
+                      <span class="select-menu-item-icon octicon octicon-question"></span>
+                      <div class="select-menu-item-text">
+                        Learn more about clone URLs
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+</form>        </div>
+
+        <div class="file-navigation-option">
+</div>
+
+
+        <div class="file-navigation-option">
+          <a href="/christiaan/tinymce-codemirror/archive/master.zip"
+             class="btn btn-sm"
+             rel="nofollow"
+             data-ga-click="Repository, download zip, location:repo overview">
+            Download ZIP
+          </a>
+        </div>
+      </div>
+  </div>
+
+  
+<div class="select-menu js-menu-container js-select-menu left">
+  <button class="btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    title="master"
+    type="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <i>Branch:</i>
+    <span class="js-select-button css-truncate-target">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+        <span class="select-menu-title">Switch branches/tags</span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" data-filter-placeholder="Filter branches/tags" class="js-select-menu-tab" role="tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open selected"
+               href="/christiaan/tinymce-codemirror/tree/master"
+               data-name="master"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="master">
+                master
+              </span>
+            </a>
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/christiaan/tinymce-codemirror/tree/1.4"
+                 data-name="1.4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="1.4">1.4</a>
+            </div>
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+    <a href="/christiaan/tinymce-codemirror/pull/new/master" class="btn btn-sm btn-primary" data-pjax data-ga-click="Repository, new pull request, location:repo overview">
+      New pull request
+    </a>
+
+  <div class="breadcrumb">
+    
+  </div>
+</div>
+
+
+
+
+
+  <div class="commit-tease js-details-container">
+    <span class="right">
+      Latest commit
+      <a class="commit-tease-sha" href="/christiaan/tinymce-codemirror/commit/53ff1e895abe0a6d5d4211db5e96967288cc269a" data-pjax>
+        53ff1e8
+      </a>
+      <time datetime="2015-11-16T14:24:59Z" is="relative-time">Nov 16, 2015</time>
+    </span>
+
+
+    <span class="commit-author-section">
+      <img alt="@christiaan" class="avatar" height="20" src="https://avatars1.githubusercontent.com/u/118490?v=3&amp;s=40" width="20" />
+      <a href="/christiaan" class="user-mention" rel="author">christiaan</a>
+    </span>
+
+        <a href="/christiaan/tinymce-codemirror/commit/53ff1e895abe0a6d5d4211db5e96967288cc269a" class="message" data-pjax="true" title="Import as provided by Arjan
+
+Rewritten the Plugin page to Markdown which can be found in README.md">Import as provided by Arjan</a>
+          <span class="hidden-text-expander inline">
+            <a href="#" class="js-details-target">…</a>
+          </span>
+    </span>
+
+      <div class="commit-desc"><pre class="text-small">Rewritten the Plugin page to Markdown which can be found in README.md</pre></div>
+  </div>
+
+
+<div class="file-wrap">
+  <a href="/christiaan/tinymce-codemirror/tree/53ff1e895abe0a6d5d4211db5e96967288cc269a" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+  <table class="files js-navigation-container js-active-navigation-container" data-pjax>
+
+
+    <tbody>
+      <tr class="warning include-fragment-error">
+        <td class="icon"><span class="octicon octicon-alert"></span></td>
+        <td class="content" colspan="3">Failed to load latest commit information.</td>
+      </tr>
+
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/christiaan/tinymce-codemirror/tree/master/plugins/codemirror" class="js-directory-link js-navigation-open" id="5f3dd1382b485d1a73374c5704e493b4-7060f288d8f363f9f312bac5ed86886470f288e2" title="This path skips through empty directories"><span class="simplified-path">plugins/</span>codemirror</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/christiaan/tinymce-codemirror/commit/53ff1e895abe0a6d5d4211db5e96967288cc269a" class="message" data-pjax="true" title="Import as provided by Arjan
+
+Rewritten the Plugin page to Markdown which can be found in README.md">Import as provided by Arjan</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-11-16T14:24:59Z" is="time-ago">Nov 16, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/christiaan/tinymce-codemirror/blob/master/LICENSE" class="js-directory-link js-navigation-open" id="9879d6db96fd29134fc802214163b95a-15bbdd45410756f1e7f4a5081e7264c2d2c7d9ee" title="LICENSE">LICENSE</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/christiaan/tinymce-codemirror/commit/53ff1e895abe0a6d5d4211db5e96967288cc269a" class="message" data-pjax="true" title="Import as provided by Arjan
+
+Rewritten the Plugin page to Markdown which can be found in README.md">Import as provided by Arjan</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-11-16T14:24:59Z" is="time-ago">Nov 16, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/christiaan/tinymce-codemirror/blob/master/README.md" class="js-directory-link js-navigation-open" id="04c6e90faac2675aa89e2176d2eec7d8-6d0bb4ae6337a63812c4a5c7ceaca278ab1ae0be" title="README.md">README.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/christiaan/tinymce-codemirror/commit/53ff1e895abe0a6d5d4211db5e96967288cc269a" class="message" data-pjax="true" title="Import as provided by Arjan
+
+Rewritten the Plugin page to Markdown which can be found in README.md">Import as provided by Arjan</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-11-16T14:24:59Z" is="time-ago">Nov 16, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/christiaan/tinymce-codemirror/blob/master/codemirror-logo.png" class="js-directory-link js-navigation-open" id="d4b5bfab5baac93893f46e15443260c2-14ced15eaa83bf07f656e408c4dd316134ca360e" title="codemirror-logo.png">codemirror-logo.png</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/christiaan/tinymce-codemirror/commit/53ff1e895abe0a6d5d4211db5e96967288cc269a" class="message" data-pjax="true" title="Import as provided by Arjan
+
+Rewritten the Plugin page to Markdown which can be found in README.md">Import as provided by Arjan</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-11-16T14:24:59Z" is="time-ago">Nov 16, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/christiaan/tinymce-codemirror/blob/master/editor.png" class="js-directory-link js-navigation-open" id="b89f67dd50af99d7d4eafcc04827e493-9496744d81794857ea2642df66d902adebc10da1" title="editor.png">editor.png</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/christiaan/tinymce-codemirror/commit/53ff1e895abe0a6d5d4211db5e96967288cc269a" class="message" data-pjax="true" title="Import as provided by Arjan
+
+Rewritten the Plugin page to Markdown which can be found in README.md">Import as provided by Arjan</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-11-16T14:24:59Z" is="time-ago">Nov 16, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/christiaan/tinymce-codemirror/blob/master/index.html" class="js-directory-link js-navigation-open" id="eacf331f0ffc35d4b482f1d15a887d3b-25f84f8da7a3cd7ed675a6ee3841289ee92f81ca" title="index.html">index.html</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/christiaan/tinymce-codemirror/commit/53ff1e895abe0a6d5d4211db5e96967288cc269a" class="message" data-pjax="true" title="Import as provided by Arjan
+
+Rewritten the Plugin page to Markdown which can be found in README.md">Import as provided by Arjan</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-11-16T14:24:59Z" is="time-ago">Nov 16, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/christiaan/tinymce-codemirror/blob/master/test.html" class="js-directory-link js-navigation-open" id="eac0a7ec83537763d3ba7671828d0989-ccb9fd1fb96b3faf29b15e946f786e49bec68743" title="test.html">test.html</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/christiaan/tinymce-codemirror/commit/53ff1e895abe0a6d5d4211db5e96967288cc269a" class="message" data-pjax="true" title="Import as provided by Arjan
+
+Rewritten the Plugin page to Markdown which can be found in README.md">Import as provided by Arjan</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-11-16T14:24:59Z" is="time-ago">Nov 16, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/christiaan/tinymce-codemirror/blob/master/tinymce-codemirror-logo.png" class="js-directory-link js-navigation-open" id="90708c59d3ea36ea4d0d7d59b02eb172-b4205d6eba97eaf7fc5b367a80e3fbb1e65c5cbd" title="tinymce-codemirror-logo.png">tinymce-codemirror-logo.png</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/christiaan/tinymce-codemirror/commit/53ff1e895abe0a6d5d4211db5e96967288cc269a" class="message" data-pjax="true" title="Import as provided by Arjan
+
+Rewritten the Plugin page to Markdown which can be found in README.md">Import as provided by Arjan</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-11-16T14:24:59Z" is="time-ago">Nov 16, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/christiaan/tinymce-codemirror/blob/master/tinymce-logo.png" class="js-directory-link js-navigation-open" id="e77b68c4e3acdea2be6da42944369845-0b60a23258795ad50fd204a0cff1d8cf4a7d073c" title="tinymce-logo.png">tinymce-logo.png</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/christiaan/tinymce-codemirror/commit/53ff1e895abe0a6d5d4211db5e96967288cc269a" class="message" data-pjax="true" title="Import as provided by Arjan
+
+Rewritten the Plugin page to Markdown which can be found in README.md">Import as provided by Arjan</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-11-16T14:24:59Z" is="time-ago">Nov 16, 2015</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/christiaan/tinymce-codemirror/blob/master/webpower-logo.jpg" class="js-directory-link js-navigation-open" id="bd54c1d07238623d298555825fe416d2-26a9f0f799fabd85f095a0f631553756598bd670" title="webpower-logo.jpg">webpower-logo.jpg</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+                  <a href="/christiaan/tinymce-codemirror/commit/53ff1e895abe0a6d5d4211db5e96967288cc269a" class="message" data-pjax="true" title="Import as provided by Arjan
+
+Rewritten the Plugin page to Markdown which can be found in README.md">Import as provided by Arjan</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-11-16T14:24:59Z" is="time-ago">Nov 16, 2015</time></span>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+  <div id="readme" class="boxed-group flush clearfix announce instapaper_body md">
+    <h3>
+      <span class="octicon octicon-book"></span>
+      README.md
+    </h3>
+
+    <article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1><a id="user-content-codemirror-for-tinymce4" class="anchor" href="#codemirror-for-tinymce4" aria-hidden="true"><span class="octicon octicon-link"></span></a>CodeMirror for TinyMCE4</h1>
+
+<p>The <a href="http://www.tinymce.com/">TinyMCE</a> wysiwyg editor comes with a very basic HTML source editor.This
+plugin for TinyMCE makes editing HTML source code a more pleasant experience. It
+is based on the excellent <a href="http://codemirror.net/">CodeMirror</a> code editor, developed by Marijn Haverbeke.
+This plugin offers the following functionality:</p>
+
+<ul>
+<li>Syntax highlighting of HTML, Javascript and PHP code</li>
+<li>Line numbers</li>
+<li>Highlighting the line currently being edited</li>
+<li>Automatic indentation</li>
+<li>Many undo/redo levels</li>
+<li>Search/Replace functionality</li>
+<li>Etc. etc.</li>
+</ul>
+
+<h2><a id="user-content-installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<ol>
+<li>Download and install TinyMCE 4 and make sure it runs correctly with default settings.</li>
+<li>Download this repository found at <a href="https://github.com/christiaan/tinymce-codemirror">https://github.com/christiaan/tinymce-codemirror</a></li>
+<li>Place the directory <code>plugins/codemirror</code> in the <code>tinymce/plugins</code> directory.</li>
+<li>Download CodeMirror (version 4 or later) from <a href="http://codemirror.net/codemirror-latest.zip">http://codemirror.net/codemirror-latest.zip</a>.</li>
+<li>Unpack codemirror-latest.zip inside the plugins/codemirror folder that was
+just created. A folder named codemirror-4.8 (or similar) will be created.</li>
+<li><p>Activate the codemirror plugin in TinyMCE:</p>
+
+<p>plugins: ['codemirror']</p></li>
+<li><p>Optionally, add the code button to TinyMCE’s toolbar:</p>
+
+<p>toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | code'</p></li>
+<li><p>Test: You should see a Source code item in the Tools menu. Click it to edit
+the HTML source code.</p></li>
+</ol>
+
+<h2><a id="user-content-configuration" class="anchor" href="#configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configuration</h2>
+
+<p>Additional configuration options</p>
+
+<p>You can modify the behaviour of the codemirror plugin, by adding a codemirror
+object to the TinyMCE configuration.</p>
+
+<p><strong>indentOnInit</strong>: boolean (false) CodeMirror automatically indents code. With
+the indentOnInit option, you tell the Source Code editor to indent all code when
+the editor opens. This might be slow for large documents.</p>
+
+<p><strong>path</strong>: string (codemirror) You might already have CodeMirror hosted elsewhere
+(outside TinyMCE). In that case, you can reuse that CodeMirror instance, by
+overriding the default path. For example:</p>
+
+<pre><code>path: 'http://www.mysite.com/tools/codemirror-4.8'
+</code></pre>
+
+<p><strong>config</strong>: Object CodeMirror configuration object, which is passed on to the
+CodeMirror instance. Check <a href="http://codemirror.net/doc/manual.html">http://codemirror.net/doc/manual.html</a> for available
+configuration options.</p>
+
+<p><strong>jsFiles</strong>: Array Array of CodeMirror Javascript files you want to
+(additionally) load. For example:</p>
+
+<pre><code>jsFiles: [
+   'mode/clike/clike.js',
+   'mode/php/php.js'
+]
+</code></pre>
+
+<p>The following Javascript files are always loaded: lib/codemirror.js,
+addon/edit/matchbrackets.js, mode/xml/xml.js, mode/javascript/javascript.js,
+mode/css/css.js, mode/htmlmixed/htmlmixed.js, addon/dialog/dialog.js,
+addon/search/searchcursor.js, addon/search/search.js,
+addon/selection/active-line.js.</p>
+
+<p><strong>cssFiles</strong>: Array Array of CodeMirror CSS files you want to (additionally)
+load. For example:</p>
+
+<pre><code>cssFiles: [
+   'theme/neat.css',
+   'theme/elegant.css'
+]
+</code></pre>
+
+<p>The following CSS files are always loaded: lib/codemirror.css,
+addon/dialog/dialog.css.</p>
+
+<p>Config example</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">tinymce</span>.<span class="pl-en">init</span>({
+  selector<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>#html<span class="pl-pds">'</span></span>,
+  plugins<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>codemirror<span class="pl-pds">'</span></span>,
+  toolbar<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | code<span class="pl-pds">'</span></span>,
+  codemirror<span class="pl-k">:</span> {
+    indentOnInit<span class="pl-k">:</span> <span class="pl-c1">true</span>, <span class="pl-c">// Whether or not to indent code on init.</span>
+    path<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>CodeMirror<span class="pl-pds">'</span></span>, <span class="pl-c">// Path to CodeMirror distribution</span>
+    config<span class="pl-k">:</span> {           <span class="pl-c">// CodeMirror config object</span>
+       mode<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>application/x-httpd-php<span class="pl-pds">'</span></span>,
+       lineNumbers<span class="pl-k">:</span> <span class="pl-c1">false</span>
+    },
+    jsFiles<span class="pl-k">:</span> [          <span class="pl-c">// Additional JS files to load</span>
+       <span class="pl-s"><span class="pl-pds">'</span>mode/clike/clike.js<span class="pl-pds">'</span></span>,
+       <span class="pl-s"><span class="pl-pds">'</span>mode/php/php.js<span class="pl-pds">'</span></span>
+    ]
+  }
+});</pre></div>
+
+<h2><a id="user-content-compatibility" class="anchor" href="#compatibility" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compatibility</h2>
+
+<p>This TinyMCE plugin is compatible with pretty much all browsers out there,
+including Firefox, Google Chrome, Safari and Internet Explorer, version 8 or
+better. It is NOT compatible with Interner Explorer 6 or 7, simply because
+CodeMirror itself does not work in these versions.</p>
+
+<h2><a id="user-content-changelog" class="anchor" href="#changelog" aria-hidden="true"><span class="octicon octicon-link"></span></a>Changelog</h2>
+
+<p>Version 1.4 - 2014-12-15</p>
+
+<ul>
+<li>Bugfix: Replace setLine call to replaceRange (for CodeMirror 4)
+This fixed � appearing in the source code.</li>
+<li>Note: This plugin requires CodeMirror version 4 (3 is no longer supported)</li>
+</ul>
+
+<p>Version 1.3 - 2014-03-04</p>
+
+<ul>
+<li>Bugfix: If any text was highlighted in CodeMirror and the code dialog is
+closed and saved, the selected text was removed from TinyMCE.</li>
+<li>Macintosh users now see Macintosh keyboard shortcuts.</li>
+</ul>
+
+<p>Version 1.2 - 2013-09-04</p>
+
+<ul>
+<li>Dirty state of CodeMirror now passed on to TinyMCE.</li>
+<li>When submitting CodeMirror code to TinyMCE, cursor position is retained.
+Note: this only works when the cursor is <em>not</em> inside a .</li>
+</ul>
+
+<p>Version 1.1 - 2013-07-19</p>
+
+<ul>
+<li>New options jsFiles and cssFiles.</li>
+</ul>
+
+<p>Version 1.0 - 2013-06-29</p>
+
+<ul>
+<li>Initial release.</li>
+</ul>
+
+<h2><a id="user-content-contributors" class="anchor" href="#contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributors</h2>
+
+<p>Arjan Haverkamp <a href="mailto:arjan@avoid.org">arjan@avoid.org</a> - original author</p>
+</article>
+  </div>
+
+
+  </div>
+  <div class="modal-backdrop"></div>
+</div>
+
+    </div>
+  </div>
+
+    </div>
+
+      <div class="container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links right">
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+      <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+        <li><a href="https://github.com/pricing" data-ga-click="Footer, go to pricing, text:pricing">Pricing</a></li>
+
+    </ul>
+
+    <a href="https://github.com" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+</a>
+    <ul class="site-footer-links">
+      <li>&copy; 2015 <span title="0.06499s from github-fe123-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact</a></li>
+        <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+    
+    
+    
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+        <span class="octicon octicon-x"></span>
+      </button>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-976fbddacdadcf32babdb1e2c8a46fafe7357217094a46b5d0afd89805d6bbf7.js"></script>
+      <script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-322e077d883463d3896cc523747a736cd6700936fe9aad6f485ba9fe321e0fa3.js"></script>
+      
+      
+      
+    <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner hidden">
+      <span class="octicon octicon-alert"></span>
+      <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+      <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    </div>
+  </body>
+</html>
+
