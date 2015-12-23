@@ -34,6 +34,11 @@
     "moment": "~2.10.6",
     "tinymceMentionPlugin": "https://github.com/iCAPLyon1/tinymceMentionPlugin",
     "tinymceAccordionPlugin": "https://github.com/iCAPLyon1/tinymceAccordionPlugin",
-    "tinymce-codemirror": "https://github.com/christiaan/tinymce-codemirror"
+    "tinymce-codemirror": "https://github.com/christiaan/tinymce-codemirror",
+    "angular-data-table": "~0.4.12",
+    "angular-bootstrap": "~0.13",
+    "angular-ui-select": "~0.13",
+    "angular-ui-tree": "~2.12",
+    "angular": "~1.3"
   }
 }
