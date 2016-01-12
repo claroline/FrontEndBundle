@@ -1,0 +1,114 @@
+{
+  "_args": [
+    [
+      "pjax@^0.2.1",
+      "/home/skl@ecam.be/projets/claronext/vendor/claroline/front-end-bundle/Claroline/Bundle/FrontEndBundle"
+    ]
+  ],
+  "_from": "pjax@>=0.2.1 <0.3.0",
+  "_id": "pjax@0.2.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/pjax",
+  "_nodeVersion": "0.10.35",
+  "_npmUser": {
+    "email": "m@moox.io",
+    "name": "moox"
+  },
+  "_npmVersion": "2.1.18",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "pjax",
+    "raw": "pjax@^0.2.1",
+    "rawSpec": "^0.2.1",
+    "scope": null,
+    "spec": ">=0.2.1 <0.3.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/pjax/-/pjax-0.2.1.tgz",
+  "_shasum": "5e47259f249b2d6e53b2b5d744b32c4922dfb75a",
+  "_shrinkwrap": null,
+  "_spec": "pjax@^0.2.1",
+  "_where": "/home/skl@ecam.be/projets/claronext/vendor/claroline/front-end-bundle/Claroline/Bundle/FrontEndBundle",
+  "author": {
+    "name": "Maxime Thirouin"
+  },
+  "bugs": {
+    "url": "https://github.com/MoOx/pjax/issues"
+  },
+  "dependencies": {},
+  "description": "Easily enable fast Ajax navigation on any website (using pushState +  xhr)",
+  "devDependencies": {
+    "browserify": "^3.46.0",
+    "coverify": "^1.0.6",
+    "jscs": "^1.6.2",
+    "jshint": "^2.5.6",
+    "tape": "^3.0.0",
+    "testling": "^1.6.1"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "5e47259f249b2d6e53b2b5d744b32c4922dfb75a",
+    "tarball": "http://registry.npmjs.org/pjax/-/pjax-0.2.1.tgz"
+  },
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "index.js",
+    "lib"
+  ],
+  "gitHead": "b244a8cac40201c0fc383776f7ad257eef8357de",
+  "homepage": "https://github.com/MoOx/pjax",
+  "keywords": [
+    "ajax",
+    "animation",
+    "navigation",
+    "pjax",
+    "push",
+    "state",
+    "transition"
+  ],
+  "license": "MIT",
+  "main": "src/pjax.js",
+  "maintainers": [
+    {
+      "name": "moox",
+      "email": "m@moox.io"
+    }
+  ],
+  "name": "pjax",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoOx/pjax.git"
+  },
+  "scripts": {
+    "coverage": "browserify -t coverify tests/**/*.js | testling | coverify",
+    "lint": "jscs **/*.js && jshint . --exclude-path .gitignore",
+    "test": "npm run lint && testling",
+    "test--html": "testling --html > tests/scripts/index.html"
+  },
+  "testling": {
+    "browsers": [
+      "android-browser/4.2..latest",
+      "chrome/10",
+      "chrome/canary",
+      "chrome/latest",
+      "firefox/4.0",
+      "firefox/latest",
+      "firefox/nightly",
+      "ie/10..latest",
+      "ipad/6.0..latest",
+      "iphone/6.0..latest",
+      "opera/12..latest",
+      "opera/next",
+      "safari/5.1..latest"
+    ],
+    "files": "tests/**/*.js"
+  },
+  "version": "0.2.1"
+}

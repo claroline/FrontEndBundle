@@ -1,0 +1,51 @@
+{
+  "name": "claroline-frontend-bundle",
+  "description": "Common frontend dependencies of the Claroline platform",
+  "license": "GPL-3.0+",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claroline/FrontEndBundle.git"
+  },
+  "scripts": {
+    "install": "napa"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "backbone": "^1.2.3",
+    "eonasdan-bootstrap-datetimepicker": "^4.15.35",
+    "fileapi": "^2.0.17",
+    "gridstack": "^0.2.3",
+    "jasmine-core": "^2.3.4",
+    "jquery-ui": "^1.10.5",
+    "bootstrap-datepicker": "^1.5.0",
+    "bootstrap-daterangepicker": "^2.1.13",
+    "fullcalendar": "^2.4.0",
+    "pjax": "^0.2.1",
+    "select2": "^4.0.0",
+    "jquery-sortable": "^0.9.13",
+    "tablesorter": "*",
+    "toastr": "^2.1.2",
+    "typeahead.js": "^0.11.1",
+    "jquery.cookie": "^1.4.1",
+    "sinon": "^1.17.2",
+    "systemjs": "^0.19.15",
+    "underscore": "^1.8.3",
+    "moment": "^2.10.6",
+    "angular-data-table": "^0.4.11",
+    "angular-bootstrap": "^0.12.2",
+    "angular-ui-select": "^0.12.100",
+    "angular-ui-tree": "^2.12",
+    "angular": "^1.4.8"
+  },
+  "napa": {
+    "jqPlot": "https://github.com/jqPlot/jqPlot",
+    "typeahead.js-bootstrap3.less": "https://github.com/hyspace/typeahead.js-bootstrap3.less",
+    "fluidvids": "https://github.com/toddmotto/fluidvids",
+    "tinymce-codemirror": "https://github.com/christiaan/tinymce-codemirror",
+    "tag-it": "https://github.com/aehlke/tag-it",
+    "tinymceMentionPlugin": "https://github.com/iCAPLyon1/tinymceMentionPlugin",
+    "tinymceAccordionPlugin": "https://github.com/iCAPLyon1/tinymceAccordionPlugin",
+    "jquery-option-tree": "https://github.com/jongilbraith/jquery-option-tree",
+    "confirm-bootstrap": "https://github.com/maxailloud/confirm-bootstrap"
+  }
+}
