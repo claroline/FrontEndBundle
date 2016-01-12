@@ -1,0 +1,76 @@
+{
+  "_args": [
+    [
+      "gridstack@^0.2.3",
+      "/home/skl@ecam.be/projets/claronext/vendor/claroline/front-end-bundle/Claroline/Bundle/FrontEndBundle"
+    ]
+  ],
+  "_from": "gridstack@>=0.2.3 <0.3.0",
+  "_id": "gridstack@0.2.3",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/gridstack",
+  "_nodeVersion": "0.12.6",
+  "_npmUser": {
+    "email": "mike@emken.co",
+    "name": "mikehaas763"
+  },
+  "_npmVersion": "2.12.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "gridstack",
+    "raw": "gridstack@^0.2.3",
+    "rawSpec": "^0.2.3",
+    "scope": null,
+    "spec": ">=0.2.3 <0.3.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/gridstack/-/gridstack-0.2.3.tgz",
+  "_shasum": "7ad7e4e8148e6200db158c9b889a316bd7ef14d1",
+  "_shrinkwrap": null,
+  "_spec": "gridstack@^0.2.3",
+  "_where": "/home/skl@ecam.be/projets/claronext/vendor/claroline/front-end-bundle/Claroline/Bundle/FrontEndBundle",
+  "author": {
+    "email": "pashka.reznikov@gmail.com",
+    "name": "Pavel Reznikov"
+  },
+  "bugs": {
+    "url": "https://github.com/troolee/gridstack.js/issues"
+  },
+  "dependencies": {},
+  "description": "gridstack.js is a jQuery plugin for widget layout",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "7ad7e4e8148e6200db158c9b889a316bd7ef14d1",
+    "tarball": "http://registry.npmjs.org/gridstack/-/gridstack-0.2.3.tgz"
+  },
+  "gitHead": "e0e9eec66fee5870a836a12448015d081f833a83",
+  "homepage": "http://troolee.github.io/gridstack.js/",
+  "keywords": [
+    "grid",
+    "gridstack",
+    "gridster",
+    "jquery",
+    "layout"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "mikehaas763",
+      "email": "mike@emken.co"
+    }
+  ],
+  "name": "gridstack",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/troolee/gridstack.js.git"
+  },
+  "scripts": {},
+  "version": "0.2.3"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "claroline-tinymce-mention",
+  "version": "1.0.0",
+  "homepage": "https://github.com/iCAPLyon1/tinymceMentionPlugin",
+  "authors": [
+    "Panos <ptsavdar@gmail.com>"
+  ],
+  "description": "Tinymce mention plugin for Claroline platform",
+  "main": "plugin.min.js",
+  "moduleType": [],
+  "keywords": [
+    "mention",
+    "tinymce",
+    "claroline"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "_args": [
+    [
+      "bootstrap-daterangepicker@^2.1.13",
+      "/home/skl@ecam.be/projets/claronext/vendor/claroline/front-end-bundle/Claroline/Bundle/FrontEndBundle"
+    ]
+  ],
+  "_from": "bootstrap-daterangepicker@>=2.1.13 <3.0.0",
+  "_id": "bootstrap-daterangepicker@2.1.17",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/bootstrap-daterangepicker",
+  "_npmUser": {
+    "email": "dan@dangrossman.info",
+    "name": "dangrossman"
+  },
+  "_npmVersion": "1.4.12",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "bootstrap-daterangepicker",
+    "raw": "bootstrap-daterangepicker@^2.1.13",
+    "rawSpec": "^2.1.13",
+    "scope": null,
+    "spec": ">=2.1.13 <3.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/bootstrap-daterangepicker/-/bootstrap-daterangepicker-2.1.17.tgz",
+  "_shasum": "91a1f96966c3ca6b604776c12f11c8ab1c553aeb",
+  "_shrinkwrap": null,
+  "_spec": "bootstrap-daterangepicker@^2.1.13",
+  "_where": "/home/skl@ecam.be/projets/claronext/vendor/claroline/front-end-bundle/Claroline/Bundle/FrontEndBundle",
+  "author": {
+    "email": "dan@dangrossman.info",
+    "name": "Dan Grossman",
+    "url": "http://www.dangrossman.info"
+  },
+  "bugs": {
+    "url": "https://github.com/dangrossman/bootstrap-daterangepicker/issues"
+  },
+  "dependencies": {
+    "jquery": "^1.10",
+    "moment": "^2.9.0"
+  },
+  "description": "Date range picker component for Bootstrap",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "91a1f96966c3ca6b604776c12f11c8ab1c553aeb",
+    "tarball": "http://registry.npmjs.org/bootstrap-daterangepicker/-/bootstrap-daterangepicker-2.1.17.tgz"
+  },
+  "gitHead": "05bf0fe85f14426f5bcfecaa3f6c721fb7e7f9e9",
+  "homepage": "https://github.com/dangrossman/bootstrap-daterangepicker",
+  "license": "MIT",
+  "main": "daterangepicker.js",
+  "maintainers": [
+    {
+      "name": "g0blin",
+      "email": "seidrhrafn@gmail.com"
+    },
+    {
+      "name": "vperron",
+      "email": "victor@iso3103.net"
+    },
+    {
+      "name": "dangrossman",
+      "email": "dan@dangrossman.info"
+    }
+  ],
+  "name": "bootstrap-daterangepicker",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dangrossman/bootstrap-daterangepicker.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "style": "daterangepicker.css",
+  "version": "2.1.17"
+}

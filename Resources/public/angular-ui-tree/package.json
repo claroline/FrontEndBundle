@@ -1,0 +1,101 @@
+{
+  "_args": [
+    [
+      "angular-ui-tree@^2.12",
+      "/home/skl@ecam.be/projets/claronext/vendor/claroline/front-end-bundle/Claroline/Bundle/FrontEndBundle"
+    ]
+  ],
+  "_from": "angular-ui-tree@>=2.12.0 <3.0.0",
+  "_id": "angular-ui-tree@2.13.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/angular-ui-tree",
+  "_nodeVersion": "0.10.29",
+  "_npmUser": {
+    "email": "niels.dequeker@gmail.com",
+    "name": "voles"
+  },
+  "_npmVersion": "2.12.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "angular-ui-tree",
+    "raw": "angular-ui-tree@^2.12",
+    "rawSpec": "^2.12",
+    "scope": null,
+    "spec": ">=2.12.0 <3.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular-ui-tree/-/angular-ui-tree-2.13.0.tgz",
+  "_shasum": "c080709fb89e64c89696aa30f237b26507d86e15",
+  "_shrinkwrap": null,
+  "_spec": "angular-ui-tree@^2.12",
+  "_where": "/home/skl@ecam.be/projets/claronext/vendor/claroline/front-end-bundle/Claroline/Bundle/FrontEndBundle",
+  "bugs": {
+    "url": "https://github.com/angular-ui-tree/angular-ui-tree/issues"
+  },
+  "dependencies": {},
+  "description": "An AngularJS UI component that can sort nested lists, provides drag & drop support and doesn't depend on jQuery",
+  "devDependencies": {
+    "codacy-coverage": "^1.1.3",
+    "connect-livereload": "^0.5.2",
+    "coveralls": "^2.11.4",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.4.3",
+    "gulp-connect": "^2.2.0",
+    "gulp-gh-pages": "^0.5.2",
+    "gulp-jscs": "^1.4.0",
+    "gulp-jshint": "^1.9.0",
+    "gulp-load-plugins": "^0.8.0",
+    "gulp-minify-css": "^1.1.0",
+    "gulp-protractor": "^1.0.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-symlink": "^2.1.0",
+    "gulp-uglify": "^1.1.0",
+    "jshint-stylish": "^1.0.0",
+    "karma": "^0.12.24",
+    "karma-coverage": "^0.5.3",
+    "karma-firefox-launcher": "^0.1.3",
+    "karma-jasmine": "~0.1.0",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "load-grunt-tasks": "^0.6.0",
+    "open": "0.0.5",
+    "protractor": "^2.1.0",
+    "require-dir": "^0.1.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "c080709fb89e64c89696aa30f237b26507d86e15",
+    "tarball": "http://registry.npmjs.org/angular-ui-tree/-/angular-ui-tree-2.13.0.tgz"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "gitHead": "52e213b71777c89d07d4799dd1e0f96d735b7fac",
+  "homepage": "https://github.com/angular-ui-tree/angular-ui-tree#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "voles",
+      "email": "niels.dequeker@gmail.com"
+    }
+  ],
+  "name": "angular-ui-tree",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular-ui-tree/angular-ui-tree.git"
+  },
+  "scripts": {
+    "codacy": "cat ./coverage/lcov/lcov.info | codacy-coverage --verbose",
+    "coveralls": "cat ./coverage/lcov/lcov.info | coveralls",
+    "test": "gulp build && gulp test:e2e"
+  },
+  "version": "2.13.0"
+}

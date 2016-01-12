@@ -1,0 +1,95 @@
+{
+  "_args": [
+    [
+      "bootstrap-datepicker@^1.5.0",
+      "/home/skl@ecam.be/projets/claronext/vendor/claroline/front-end-bundle/Claroline/Bundle/FrontEndBundle"
+    ]
+  ],
+  "_from": "bootstrap-datepicker@>=1.5.0 <2.0.0",
+  "_id": "bootstrap-datepicker@1.5.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/bootstrap-datepicker",
+  "_nodeVersion": "0.12.7",
+  "_npmUser": {
+    "email": "jeroenthora@gmail.com",
+    "name": "acrobat"
+  },
+  "_npmVersion": "2.11.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "bootstrap-datepicker",
+    "raw": "bootstrap-datepicker@^1.5.0",
+    "rawSpec": "^1.5.0",
+    "scope": null,
+    "spec": ">=1.5.0 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/bootstrap-datepicker/-/bootstrap-datepicker-1.5.1.tgz",
+  "_shasum": "70ad2f37cbe3bd814991324cbf2c45356827b13a",
+  "_shrinkwrap": null,
+  "_spec": "bootstrap-datepicker@^1.5.0",
+  "_where": "/home/skl@ecam.be/projets/claronext/vendor/claroline/front-end-bundle/Claroline/Bundle/FrontEndBundle",
+  "author": {
+    "email": "eternicode@gmail.com",
+    "name": "Andrew Rowls"
+  },
+  "bugs": {
+    "url": "https://github.com/eternicode/bootstrap-datepicker/issues"
+  },
+  "dependencies": {
+    "jquery": ">=1.7.1"
+  },
+  "description": "A datepicker for Bootstrap forked from Stefan Petre's (of eyecon.ro), improvements by eternicode",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-banner": "~0.2.3",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-compress": "~0.13.0",
+    "grunt-contrib-concat": "~0.5.0",
+    "grunt-contrib-csslint": "~0.3.1",
+    "grunt-contrib-cssmin": "~0.10.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-less": "~0.12.0",
+    "grunt-contrib-qunit": "~0.5.2",
+    "grunt-contrib-uglify": "~0.6.0",
+    "grunt-jscs": ">=1.1.0, <2.0",
+    "grunt-string-replace": "~1.0.0",
+    "load-grunt-tasks": "~1.0.0",
+    "phantomjs": "~1.9.0",
+    "time-grunt": "~1.0.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "70ad2f37cbe3bd814991324cbf2c45356827b13a",
+    "tarball": "http://registry.npmjs.org/bootstrap-datepicker/-/bootstrap-datepicker-1.5.1.tgz"
+  },
+  "gitHead": "fc74bfa7bf5af6621442d9ac7412ce1b0d109e02",
+  "homepage": "https://github.com/eternicode/bootstrap-datepicker",
+  "keywords": [
+    "bootstrap",
+    "datepicker"
+  ],
+  "license": "Apache-2.0",
+  "main": "./dist/js/bootstrap-datepicker.js",
+  "maintainers": [
+    {
+      "name": "acrobat",
+      "email": "jeroenthora@gmail.com"
+    }
+  ],
+  "name": "bootstrap-datepicker",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eternicode/bootstrap-datepicker.git"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "version": "1.5.1"
+}

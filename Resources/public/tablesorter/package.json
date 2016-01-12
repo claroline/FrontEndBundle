@@ -1,0 +1,117 @@
+{
+  "_args": [
+    [
+      "tablesorter@*",
+      "/home/skl@ecam.be/projets/claronext/vendor/claroline/front-end-bundle/Claroline/Bundle/FrontEndBundle"
+    ]
+  ],
+  "_from": "tablesorter@*",
+  "_id": "tablesorter@2.25.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/tablesorter",
+  "_nodeVersion": "4.2.1",
+  "_npmUser": {
+    "email": "wowmotty@gmail.com",
+    "name": "mottie"
+  },
+  "_npmVersion": "2.14.7",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "tablesorter",
+    "raw": "tablesorter@*",
+    "rawSpec": "*",
+    "scope": null,
+    "spec": "*",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/tablesorter/-/tablesorter-2.25.1.tgz",
+  "_shasum": "307dd346eb91809e4cd391b1b7f9e904f85512db",
+  "_shrinkwrap": null,
+  "_spec": "tablesorter@*",
+  "_where": "/home/skl@ecam.be/projets/claronext/vendor/claroline/front-end-bundle/Claroline/Bundle/FrontEndBundle",
+  "author": {
+    "name": "Christian Bach",
+    "url": "http://tablesorter.com/"
+  },
+  "autoupdate": {
+    "basePath": "",
+    "files": [
+      "dist/**/*"
+    ],
+    "source": "git",
+    "target": "git://github.com/Mottie/tablesorter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mottie/tablesorter/issues"
+  },
+  "demo": "https://github.com/Mottie/tablesorter/wiki",
+  "dependencies": {
+    "jquery": ">=1.2.6"
+  },
+  "description": "tablesorter (FORK) is a jQuery plugin for turning a standard HTML table with THEAD and TBODY tags into a sortable table without page refreshes. tablesorter can successfully parse and sort many types of data including linked data in a cell.",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "~0.1.13",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-contrib-qunit": "^0.7.0",
+    "grunt-contrib-uglify": "^0.11.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-htmlhint": "^0.9.12",
+    "grunt-jscs": "^2.3.0",
+    "grunt-string-replace": "^1.2.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "307dd346eb91809e4cd391b1b7f9e904f85512db",
+    "tarball": "http://registry.npmjs.org/tablesorter/-/tablesorter-2.25.1.tgz"
+  },
+  "docs": "http://mottie.github.com/tablesorter/docs/index.html",
+  "files": [
+    "dist/"
+  ],
+  "gitHead": "a0181a43376f6b7d72d98eaaf1b84a061ec95cc3",
+  "homepage": "http://mottie.github.com/tablesorter/",
+  "keywords": [
+    "alphanumeric",
+    "jquery-plugin",
+    "natural",
+    "sort",
+    "sorting",
+    "table"
+  ],
+  "license": "(MIT OR GPL-2.0+)",
+  "main": "dist/js/jquery.tablesorter.combined.js",
+  "maintainers": [
+    {
+      "name": "mottie",
+      "email": "wowmotty@gmail.com"
+    }
+  ],
+  "name": "tablesorter",
+  "npmFileMap": [
+    {
+      "basePath": "",
+      "files": [
+        "dist/**/*"
+      ]
+    }
+  ],
+  "npmName": "tablesorter",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Mottie/tablesorter.git"
+  },
+  "scripts": {},
+  "title": "tablesorter",
+  "version": "2.25.1"
+}

@@ -1,0 +1,78 @@
+{
+  "_args": [
+    [
+      "jquery-sortable@^0.9.13",
+      "/home/skl@ecam.be/projets/claronext/vendor/claroline/front-end-bundle/Claroline/Bundle/FrontEndBundle"
+    ]
+  ],
+  "_from": "jquery-sortable@>=0.9.13 <0.10.0",
+  "_id": "jquery-sortable@0.9.13",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/jquery-sortable",
+  "_nodeVersion": "0.12.4",
+  "_npmUser": {
+    "email": "zschuster@sjcoe.net",
+    "name": "cedrsystems"
+  },
+  "_npmVersion": "2.10.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "jquery-sortable",
+    "raw": "jquery-sortable@^0.9.13",
+    "rawSpec": "^0.9.13",
+    "scope": null,
+    "spec": ">=0.9.13 <0.10.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/jquery-sortable/-/jquery-sortable-0.9.13.tgz",
+  "_shasum": "1cbfb655013a0747370571f06e22f524a00ffba2",
+  "_shrinkwrap": null,
+  "_spec": "jquery-sortable@^0.9.13",
+  "_where": "/home/skl@ecam.be/projets/claronext/vendor/claroline/front-end-bundle/Claroline/Bundle/FrontEndBundle",
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/johnny/jquery-sortable/issues"
+  },
+  "dependencies": {
+    "jquery": "^2.1.2"
+  },
+  "description": "jquery plugin for sortable, nestable lists",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "1cbfb655013a0747370571f06e22f524a00ffba2",
+    "tarball": "http://registry.npmjs.org/jquery-sortable/-/jquery-sortable-0.9.13.tgz"
+  },
+  "gitHead": "35f4ffaf5802ebf61202279cbab5037edf2af82a",
+  "homepage": "https://github.com/johnny/jquery-sortable",
+  "keywords": [
+    "drag",
+    "dragging",
+    "sort",
+    "sortable",
+    "sorting"
+  ],
+  "license": "BSD-3",
+  "main": "./source/js/jquery-sortable.js",
+  "maintainers": [
+    {
+      "name": "cedrsystems",
+      "email": "zschuster@sjcoe.net"
+    }
+  ],
+  "name": "jquery-sortable",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnny/jquery-sortable.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.9.13"
+}
