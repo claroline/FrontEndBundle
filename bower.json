@@ -14,7 +14,6 @@
     "bootstrap-datepicker": "~1.5.0",
     "bootstrap-daterangepicker": "~2.1.13",
     "fullcalendar": "~2.4.0",
-    "jqPlot": "https://github.com/jqPlot/jqPlot",
     "pjax": "~0.2.1",
     "select2": "~4.0.0",
     "jquery-sortable": "~0.9.13",
@@ -24,19 +23,20 @@
     "typeahead.js": "~0.11.1",
     "typeahead.js-bootstrap3.less": "~0.2.3",
     "jquery.cookie": "~1.4.1",
-    "jquery-option-tree": "https://github.com/jongilbraith/jquery-option-tree",
     "sinon": "~1.17.2",
     "system.js": "~0.19.6",
     "underscore": "~1.8.3",
     "moment": "~2.10.6",
-    "tinymceMentionPlugin": "https://github.com/iCAPLyon1/tinymceMentionPlugin",
-    "tinymceAccordionPlugin": "https://github.com/iCAPLyon1/tinymceAccordionPlugin",
-    "tinymce-codemirror": "https://github.com/christiaan/tinymce-codemirror",
     "angular-data-table": "~0.4.12",
     "angular-bootstrap": "~0.14.0",
     "angular-ui-select": "~0.13",
     "angular-ui-tree": "~2.12",
     "angular": "~1.4.8",
-    "confirm-bootstrap": "https://github.com/maxailloud/confirm-bootstrap.git"
+    "confirm-bootstrap": "https://github.com/maxailloud/confirm-bootstrap.git",
+    "jqPlot": "https://github.com/jqPlot/jqPlot.git",
+    "jquery-option-tree": "https://github.com/jongilbraith/jquery-option-tree.git",
+    "claroline-tinymce-mention": "https://github.com/iCAPLyon1/tinymceMentionPlugin.git",
+    "claroline-tinymce-accordion": "https://github.com/iCAPLyon1/tinymceAccordionPlugin.git",
+    "tinymce-codemirror": "https://github.com/christiaan/tinymce-codemirror.git"
   }
 }

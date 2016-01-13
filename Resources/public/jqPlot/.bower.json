@@ -1,11 +1,14 @@
 {
   "name": "jqPlot",
-  "_cacheHeaders": {
-    "Content-Type": "text/html; charset=utf-8"
+  "homepage": "https://github.com/jqPlot/jqPlot",
+  "_release": "cbcf3866cf",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "cbcf3866cfab23137083d7ea396a0bf1f362e52e"
   },
-  "main": "index",
-  "_source": "https://github.com/jqPlot/jqPlot",
+  "_source": "https://github.com/jqPlot/jqPlot.git",
   "_target": "*",
-  "_originalSource": "https://github.com/jqPlot/jqPlot",
+  "_originalSource": "https://github.com/jqPlot/jqPlot.git",
   "_direct": true
 }
