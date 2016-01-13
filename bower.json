@@ -29,7 +29,6 @@
     "moment": "~2.10.6",
     "pjax": "~0.2.1",
     "select2": "~4.0.0",
-    "sinon": "~1.17.2",
     "system.js": "~0.19.6",
     "tablesorter": "*",
     "tag-it": "*",
