@@ -10,10 +10,7 @@
     "fileapi": "~2.0.17",
     "fluidvids": "~2.4.1",
     "gridstack": "~0.2.3",
-    "jasmine-core": "jasmine#~2.3.4",
     "jquery-ui": "~1.11.4",
-    "jquery-ui-old": "jquery-ui#1.9.2",
-    "confirm-bootstrap": "https://github.com/maxailloud/confirm-bootstrap",
     "bootstrap-datepicker": "~1.5.0",
     "bootstrap-daterangepicker": "~2.1.13",
     "fullcalendar": "~2.4.0",
@@ -39,6 +36,7 @@
     "angular-bootstrap": "~0.14.0",
     "angular-ui-select": "~0.13",
     "angular-ui-tree": "~2.12",
-    "angular": "~1.4.8"
+    "angular": "~1.4.8",
+    "confirm-bootstrap": "https://github.com/maxailloud/confirm-bootstrap.git"
   }
 }
