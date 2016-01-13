@@ -28,7 +28,6 @@
     "jquery.cookie": "~1.4.1",
     "mjolnic-bootstrap-colorpicker": "~2.3.0",
     "moment": "~2.10.6",
-    "pjax": "~0.2.1",
     "select2": "~4.0.0",
     "system.js": "~0.19.6",
     "tablesorter": "*",
@@ -37,6 +36,6 @@
     "toastr": "~2.1.2",
     "typeahead.js": "~0.11.1",
     "typeahead.js-bootstrap3.less": "~0.2.3",
-    "underscore": "~1.8.3"git s
+    "underscore": "~1.8.3"
   }
 }
