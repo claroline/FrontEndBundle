@@ -27,13 +27,13 @@ var tokenizers = (function() {
   }
 
   function getObjTokenizer(tokenizer) {
-    return function setKey(keys) {
-      keys = _.isArray(keys) ? keys : [].slice.call(arguments, 0);
+    return function setKey(/* key, ... */) {
+      var args = [].slice.call(arguments, 0);
 
       return function tokenize(o) {
         var tokens = [];
 
-        _.each(keys, function(k) {
+        _.each(args, function(k) {
           tokens = tokens.concat(tokenizer(_.toStr(o[k])));
         });
 

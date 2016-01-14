@@ -27,8 +27,6 @@ var LruCache = (function() {
       if (this.size >= this.maxSize) {
         this.list.remove(tailItem);
         delete this.hash[tailItem.key];
-
-        this.size--;
       }
 
       // writing over existing key

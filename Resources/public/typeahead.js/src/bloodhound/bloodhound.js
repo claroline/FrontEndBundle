@@ -4,43 +4,52 @@
  * Copyright 2013-2014 Twitter, Inc. and other contributors; Licensed MIT
  */
 
-var Bloodhound = (function() {
+(function(root) {
   'use strict';
 
-  var old;
+  var old, keys;
 
-  old = window && window.Bloodhound;
+  old = root.Bloodhound;
+  keys = { data: 'data', protocol: 'protocol', thumbprint: 'thumbprint' };
+
+  // add Bloodhoud to global context
+  root.Bloodhound = Bloodhound;
 
   // constructor
   // -----------
 
   function Bloodhound(o) {
-    o = oParser(o);
+    if (!o || (!o.local && !o.prefetch && !o.remote)) {
+      $.error('one of local, prefetch, or remote is required');
+    }
 
-    this.sorter = o.sorter;
-    this.identify = o.identify;
-    this.sufficient = o.sufficient;
+    this.limit = o.limit || 5;
+    this.sorter = getSorter(o.sorter);
+    this.dupDetector = o.dupDetector || ignoreDuplicates;
 
-    this.local = o.local;
-    this.remote = o.remote ? new Remote(o.remote) : null;
-    this.prefetch = o.prefetch ? new Prefetch(o.prefetch) : null;
+    this.local = oParser.local(o);
+    this.prefetch = oParser.prefetch(o);
+    this.remote = oParser.remote(o);
+
+    this.cacheKey = this.prefetch ?
+      (this.prefetch.cacheKey || this.prefetch.url) : null;
 
     // the backing data structure used for fast pattern matching
     this.index = new SearchIndex({
-      identify: this.identify,
       datumTokenizer: o.datumTokenizer,
       queryTokenizer: o.queryTokenizer
     });
 
-    // hold off on intialization if the intialize option was explicitly false
-    o.initialize !== false && this.initialize();
+    // only initialize storage if there's a cacheKey otherwise
+    // loading from storage on subsequent page loads is impossible
+    this.storage = this.cacheKey ? new PersistentStorage(this.cacheKey) : null;
   }
 
   // static methods
   // --------------
 
   Bloodhound.noConflict = function noConflict() {
-    window && (window.Bloodhound = old);
+    root.Bloodhound = old;
     return Bloodhound;
   };
 
@@ -51,65 +60,97 @@ var Bloodhound = (function() {
 
   _.mixin(Bloodhound.prototype, {
 
-    // ### super secret stuff used for integration with jquery plugin
-
-    __ttAdapter: function ttAdapter() {
-      var that = this;
-
-      return this.remote ? withAsync : withoutAsync;
-
-      function withAsync(query, sync, async) {
-        return that.search(query, sync, async);
-      }
-
-      function withoutAsync(query, sync) {
-        return that.search(query, sync);
-      }
-    },
-
     // ### private
 
-    _loadPrefetch: function loadPrefetch() {
-      var that = this, deferred, serialized;
+    _loadPrefetch: function loadPrefetch(o) {
+      var that = this, serialized, deferred;
 
-      deferred = $.Deferred();
-
-      if (!this.prefetch) {
-        deferred.resolve();
-      }
-
-      else if (serialized = this.prefetch.fromCache()) {
+      if (serialized = this._readFromStorage(o.thumbprint)) {
         this.index.bootstrap(serialized);
-        deferred.resolve();
+        deferred = $.Deferred().resolve();
       }
 
       else {
-        this.prefetch.fromNetwork(done);
+        deferred = $.ajax(o.url, o.ajax).done(handlePrefetchResponse);
       }
 
-      return deferred.promise();
+      return deferred;
 
-      function done(err, data) {
-        if (err) { return deferred.reject(); }
+      function handlePrefetchResponse(resp) {
+        // clear to mirror the behavior of bootstrapping
+        that.clear();
+        that.add(o.filter ? o.filter(resp) : resp);
 
-        that.add(data);
-        that.prefetch.store(that.index.serialize());
-        deferred.resolve();
+        that._saveToStorage(that.index.serialize(), o.thumbprint, o.ttl);
       }
     },
 
+    _getFromRemote: function getFromRemote(query, cb) {
+      var that = this, url, uriEncodedQuery;
+
+      if (!this.transport) { return; }
+
+      query = query || '';
+      uriEncodedQuery = encodeURIComponent(query);
+
+      url = this.remote.replace ?
+        this.remote.replace(this.remote.url, query) :
+        this.remote.url.replace(this.remote.wildcard, uriEncodedQuery);
+
+      return this.transport.get(url, this.remote.ajax, handleRemoteResponse);
+
+      function handleRemoteResponse(err, resp) {
+        err ? cb([]) : cb(that.remote.filter ? that.remote.filter(resp) : resp);
+      }
+    },
+
+    _cancelLastRemoteRequest: function cancelLastRemoteRequest() {
+      // #149: prevents outdated rate-limited requests from being sent
+      this.transport && this.transport.cancel();
+    },
+
+    _saveToStorage: function saveToStorage(data, thumbprint, ttl) {
+      if (this.storage) {
+        this.storage.set(keys.data, data, ttl);
+        this.storage.set(keys.protocol, location.protocol, ttl);
+        this.storage.set(keys.thumbprint, thumbprint, ttl);
+      }
+    },
+
+    _readFromStorage: function readFromStorage(thumbprint) {
+      var stored = {}, isExpired;
+
+      if (this.storage) {
+        stored.data = this.storage.get(keys.data);
+        stored.protocol = this.storage.get(keys.protocol);
+        stored.thumbprint = this.storage.get(keys.thumbprint);
+      }
+      // the stored data is considered expired if the thumbprints
+      // don't match or if the protocol it was originally stored under
+      // has changed
+      isExpired = stored.thumbprint !== thumbprint ||
+        stored.protocol !== location.protocol;
+
+      return stored.data && !isExpired ? stored.data : null;
+    },
+
     _initialize: function initialize() {
-      var that = this, deferred;
+      var that = this, local = this.local, deferred;
 
-      // in case this is a reinitialization, clear previous data
-      this.clear();
+      deferred = this.prefetch ?
+        this._loadPrefetch(this.prefetch) : $.Deferred().resolve();
 
-      (this.initPromise = this._loadPrefetch())
-      .done(addLocalToIndex); // local must be added to index after prefetch
+      // make sure local is added to the index after prefetch
+      local && deferred.done(addLocalToIndex);
 
-      return this.initPromise;
+      this.transport = this.remote ? new Transport(this.remote) : null;
 
-      function addLocalToIndex() { that.add(that.local); }
+      return (this.initPromise = deferred.promise());
+
+      function addLocalToIndex() {
+        // local can be a function that returns an array of datums
+        that.add(_.isFunction(local) ? local() : local);
+      }
     },
 
     // ### public
@@ -118,75 +159,76 @@ var Bloodhound = (function() {
       return !this.initPromise || force ? this._initialize() : this.initPromise;
     },
 
-    // TODO: before initialize what happens?
     add: function add(data) {
       this.index.add(data);
-      return this;
     },
 
-    get: function get(ids) {
-      ids = _.isArray(ids) ? ids : [].slice.call(arguments);
-      return this.index.get(ids);
-    },
+    get: function get(query, cb) {
+      var that = this, matches = [], cacheHit = false;
 
-    search: function search(query, sync, async) {
-      var that = this, local;
+      matches = this.index.get(query);
+      matches = this.sorter(matches).slice(0, this.limit);
 
-      local = this.sorter(this.index.search(query));
+      matches.length < this.limit ?
+        (cacheHit = this._getFromRemote(query, returnRemoteMatches)) :
+        this._cancelLastRemoteRequest();
 
-      // return a copy to guarantee no changes within this scope
-      // as this array will get used when processing the remote results
-      sync(this.remote ? local.slice() : local);
-
-      if (this.remote && local.length < this.sufficient) {
-        this.remote.get(query, processRemote);
+      // if a cache hit occurred, skip rendering local matches
+      // because the rendering of local/remote matches is already
+      // in the event loop
+      if (!cacheHit) {
+        // only render if there are some local suggestions or we're
+        // going to the network to backfill
+        (matches.length > 0 || !this.transport) && cb && cb(matches);
       }
 
-      else if (this.remote) {
-        // #149: prevents outdated rate-limited requests from being sent
-        this.remote.cancelLastRequest();
-      }
+      function returnRemoteMatches(remoteMatches) {
+        var matchesWithBackfill = matches.slice(0);
 
-      return this;
+        _.each(remoteMatches, function(remoteMatch) {
+          var isDuplicate;
 
-      function processRemote(remote) {
-        var nonDuplicates = [];
+          // checks for duplicates
+          isDuplicate = _.some(matchesWithBackfill, function(match) {
+            return that.dupDetector(remoteMatch, match);
+          });
 
-        // exclude duplicates
-        _.each(remote, function(r) {
-           !_.some(local, function(l) {
-            return that.identify(r) === that.identify(l);
-          }) && nonDuplicates.push(r);
+          !isDuplicate && matchesWithBackfill.push(remoteMatch);
+
+          // if we're at the limit, we no longer need to process
+          // the remote results and can break out of the each loop
+          return matchesWithBackfill.length < that.limit;
         });
-
-        async && async(nonDuplicates);
+        cb && cb(that.sorter(matchesWithBackfill));
       }
-    },
-
-    all: function all() {
-      return this.index.all();
     },
 
     clear: function clear() {
       this.index.reset();
-      return this;
     },
 
     clearPrefetchCache: function clearPrefetchCache() {
-      this.prefetch && this.prefetch.clear();
-      return this;
+      this.storage && this.storage.clear();
     },
 
     clearRemoteCache: function clearRemoteCache() {
-      Transport.resetCache();
-      return this;
+      this.transport && Transport.resetCache();
     },
 
-    // DEPRECATED: will be removed in v1
-    ttAdapter: function ttAdapter() {
-      return this.__ttAdapter();
-    }
+    ttAdapter: function ttAdapter() { return _.bind(this.get, this); }
   });
 
   return Bloodhound;
-})();
+
+  // helper functions
+  // ----------------
+
+  function getSorter(sortFn) {
+    return _.isFunction(sortFn) ? sort : noSort;
+
+    function sort(array) { return array.sort(sortFn); }
+    function noSort(array) { return array; }
+  }
+
+  function ignoreDuplicates() { return false; }
+})(this);

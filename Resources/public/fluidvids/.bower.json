@@ -9,6 +9,6 @@
     "commit": "f4e0534fbbd8f2b9fa98631f05484cdb547fa7a5"
   },
   "_source": "git://github.com/toddmotto/fluidvids.git",
-  "_target": "~2.4.1",
+  "_target": "^2.4.1",
   "_originalSource": "fluidvids"
 }
