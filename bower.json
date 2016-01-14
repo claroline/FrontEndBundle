@@ -21,7 +21,7 @@
     "fullcalendar": "~2.4.0",
     "gridstack": "~0.2.3",
     "jqPlot": "https://github.com/jqPlot/jqPlot.git",
-    "jquery": "~2.1.4",
+    "jquery": "^2.2.0",
     "jquery-option-tree": "https://github.com/jongilbraith/jquery-option-tree.git",
     "jquery-sortable": "~0.9.13",
     "jquery-ui": "~1.11.4",
