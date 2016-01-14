@@ -25,15 +25,14 @@
     ".*"
   ],
   "homepage": "https://github.com/mailru/FileAPI",
-  "version": "2.0.17",
-  "_release": "2.0.17",
+  "version": "2.0.18",
+  "_release": "2.0.18",
   "_resolution": {
     "type": "version",
-    "tag": "2.0.17",
-    "commit": "6c4433b8a3064755485c66a2e1c07ee805165bea"
+    "tag": "2.0.18",
+    "commit": "228a85d60c74693bfeb3822f87c090001bb03b78"
   },
   "_source": "git://github.com/mailru/FileAPI.git",
-  "_target": "~2.0.17",
-  "_originalSource": "fileapi",
-  "_direct": true
+  "_target": "^2.0.17",
+  "_originalSource": "fileapi"
 }

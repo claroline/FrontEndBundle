@@ -40,7 +40,6 @@
     "commit": "b5b6ff441088704dd7a4905da06eeae3d8a885c7"
   },
   "_source": "git://github.com/troolee/gridstack.js.git",
-  "_target": "~0.2.3",
-  "_originalSource": "gridstack",
-  "_direct": true
+  "_target": "^0.2.3",
+  "_originalSource": "gridstack"
 }

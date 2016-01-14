@@ -11,20 +11,18 @@ var semver = require('semver'),
       'src/bloodhound/persistent_storage.js',
       'src/bloodhound/transport.js',
       'src/bloodhound/search_index.js',
-      'src/bloodhound/prefetch.js',
-      'src/bloodhound/remote.js',
       'src/bloodhound/options_parser.js',
       'src/bloodhound/bloodhound.js'
       ],
       typeahead: [
-      'src/typeahead/www.js',
+      'src/typeahead/html.js',
+      'src/typeahead/css.js',
       'src/typeahead/event_bus.js',
       'src/typeahead/event_emitter.js',
       'src/typeahead/highlight.js',
       'src/typeahead/input.js',
       'src/typeahead/dataset.js',
-      'src/typeahead/menu.js',
-      'src/typeahead/default_menu.js',
+      'src/typeahead/dropdown.js',
       'src/typeahead/typeahead.js',
       'src/typeahead/plugin.js'
       ]
@@ -34,7 +32,6 @@ module.exports = function(grunt) {
   grunt.initConfig({
     version: grunt.file.readJSON('package.json').version,
 
-    tempDir: 'dist_temp',
     buildDir: 'dist',
 
     banner: [
@@ -47,45 +44,24 @@ module.exports = function(grunt) {
 
     uglify: {
       options: {
-        banner: '<%= banner %>'
+        banner: '<%= banner %>',
+        enclose: { 'window.jQuery': '$' }
       },
-
-      concatBloodhound: {
-        options: {
-          mangle: false,
-          beautify: true,
-          compress: false,
-          banner: ''
-        },
-        src: files.common.concat(files.bloodhound),
-        dest: '<%= tempDir %>/bloodhound.js'
-      },
-      concatTypeahead: {
-        options: {
-          mangle: false,
-          beautify: true,
-          compress: false,
-          banner: ''
-        },
-        src: files.common.concat(files.typeahead),
-        dest: '<%= tempDir %>/typeahead.jquery.js'
-      },
-
       bloodhound: {
         options: {
           mangle: false,
           beautify: true,
           compress: false
         },
-        src: '<%= tempDir %>/bloodhound.js',
+        src: files.common.concat(files.bloodhound),
         dest: '<%= buildDir %>/bloodhound.js'
       },
       bloodhoundMin: {
         options: {
           mangle: true,
-          compress: {}
+          compress: true
         },
-        src: '<%= tempDir %>/bloodhound.js',
+        src: files.common.concat(files.bloodhound),
         dest: '<%= buildDir %>/bloodhound.min.js'
       },
       typeahead: {
@@ -94,16 +70,18 @@ module.exports = function(grunt) {
           beautify: true,
           compress: false
         },
-        src: '<%= tempDir %>/typeahead.jquery.js',
+        src: files.common.concat(files.typeahead),
         dest: '<%= buildDir %>/typeahead.jquery.js'
+
       },
       typeaheadMin: {
         options: {
           mangle: true,
-          compress: {}
+          compress: true
         },
-        src: '<%= tempDir %>/typeahead.jquery.js',
+        src: files.common.concat(files.typeahead),
         dest: '<%= buildDir %>/typeahead.jquery.min.js'
+
       },
       bundle: {
         options: {
@@ -111,47 +89,17 @@ module.exports = function(grunt) {
           beautify: true,
           compress: false
         },
-        src: [
-          '<%= tempDir %>/bloodhound.js',
-          '<%= tempDir %>/typeahead.jquery.js'
-        ],
+        src: files.common.concat(files.bloodhound, files.typeahead),
         dest: '<%= buildDir %>/typeahead.bundle.js'
 
       },
-      bundleMin: {
+      bundlemin: {
         options: {
           mangle: true,
-          compress: {}
+          compress: true
         },
-        src: [
-          '<%= tempDir %>/bloodhound.js',
-          '<%= tempDir %>/typeahead.jquery.js'
-        ],
+        src: files.common.concat(files.bloodhound, files.typeahead),
         dest: '<%= buildDir %>/typeahead.bundle.min.js'
-      }
-    },
-
-    umd: {
-      bloodhound: {
-        src: '<%= tempDir %>/bloodhound.js',
-        objectToExport: 'Bloodhound',
-        amdModuleId: 'bloodhound',
-        deps: {
-          default: ['$'],
-          amd: ['jquery'],
-          cjs: ['jquery'],
-          global: ['jQuery']
-        }
-      },
-      typeahead: {
-        src: '<%= tempDir %>/typeahead.jquery.js',
-        amdModuleId: 'typeahead.js',
-        deps: {
-          default: ['$'],
-          amd: ['jquery'],
-          cjs: ['jquery'],
-          global: ['jQuery']
-        }
       }
     },
 
@@ -169,7 +117,7 @@ module.exports = function(grunt) {
         jshintrc: '.jshintrc'
       },
       src: 'src/**/*.js',
-      test: ['test/**/*_spec.js', 'test/integration/test.js'],
+      test: ['test/*_spec.js', 'test/integration/test.js'],
       gruntfile: ['Gruntfile.js']
     },
 
@@ -296,27 +244,14 @@ module.exports = function(grunt) {
   // -------
 
   grunt.registerTask('default', 'build');
+  grunt.registerTask('build', ['uglify', 'sed:version']);
   grunt.registerTask('server', 'connect:server');
   grunt.registerTask('lint', 'jshint');
-  grunt.registerTask('dev', ['build', 'concurrent:dev']);
-  grunt.registerTask('build', [
-    'uglify:concatBloodhound',
-    'uglify:concatTypeahead',
-    'umd:bloodhound',
-    'umd:typeahead',
-    'uglify:bloodhound',
-    'uglify:bloodhoundMin',
-    'uglify:typeahead',
-    'uglify:typeaheadMin',
-    'uglify:bundle',
-    'uglify:bundleMin',
-    'sed:version'
-  ]);
+  grunt.registerTask('dev', 'concurrent:dev');
 
   // load tasks
   // ----------
 
-  grunt.loadNpmTasks('grunt-umd');
   grunt.loadNpmTasks('grunt-sed');
   grunt.loadNpmTasks('grunt-exec');
   grunt.loadNpmTasks('grunt-step');

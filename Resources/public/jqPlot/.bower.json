@@ -1,11 +1,11 @@
 {
   "name": "jqPlot",
   "homepage": "https://github.com/jqPlot/jqPlot",
-  "_release": "3ef5e450cf",
+  "_release": "96f62d9928",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "3ef5e450cf630768921143c7b8816eb9130ddabc"
+    "commit": "96f62d99289b846ec3c9c8a8e15077e90d6387a7"
   },
   "_source": "https://github.com/jqPlot/jqPlot.git",
   "_target": "*",
