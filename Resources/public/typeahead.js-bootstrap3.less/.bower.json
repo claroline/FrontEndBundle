@@ -27,7 +27,6 @@
     "commit": "108edc393e9002a3980551f3ab07ac38d81f947b"
   },
   "_source": "git://github.com/hyspace/typeahead.js-bootstrap3.less.git",
-  "_target": "~0.2.3",
-  "_originalSource": "typeahead.js-bootstrap3.less",
-  "_direct": true
+  "_target": "^0.2.3",
+  "_originalSource": "typeahead.js-bootstrap3.less"
 }

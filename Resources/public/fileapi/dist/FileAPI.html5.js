@@ -1,4 +1,4 @@
-/*! FileAPI 2.0.17 - BSD | git://github.com/mailru/FileAPI.git
+/*! FileAPI 2.0.18 - BSD | git://github.com/mailru/FileAPI.git
  * FileAPI — a set of  javascript tools for working with files. Multiupload, drag'n'drop and chunked file upload. Images: crop, resize and auto orientation by EXIF.
  */
 
@@ -285,7 +285,7 @@
 		 * FileAPI (core object)
 		 */
 		api = {
-			version: '2.0.17',
+			version: '2.0.18',
 
 			cors: false,
 			html5: true,
@@ -707,7 +707,7 @@
 			 * @param	{Boolean}		[progress]
 			 */
 			readAsImage: function (file, fn, progress){
-				if( api.isFile(file) ){
+				if( api.isBlob(file) ){
 					if( apiURL ){
 						/** @namespace apiURL.createObjectURL */
 						var data = apiURL.createObjectURL(file);
@@ -988,7 +988,7 @@
 			getInfo: function (file, fn){
 				var info = {}, readers = _infoReader.concat();
 
-				if( api.isFile(file) ){
+				if( api.isBlob(file) ){
 					(function _next(){
 						var reader = readers.shift();
 						if( reader ){
@@ -1612,7 +1612,9 @@
 					_one(reader, _readerEvents, function (evt){
 						var isFile = evt.type != 'error';
 						if( isFile ){
-							reader.abort();
+							if ( reader.readyState == null || reader.readyState === reader.LOADING ) {
+								reader.abort();
+							}
 							callback(isFile);
 						}
 						else {
@@ -3283,8 +3285,19 @@
 			try {
 				this._active = false;
 				this.video.pause();
-				this.stream.stop();
-			} catch( err ){ }
+
+				try {
+					this.stream.stop();
+				} catch (err) {
+					api.each(this.stream.getTracks(), function (track) {
+						track.stop();
+					});
+				}
+
+				this.stream = null;
+			} catch( err ){
+				api.log('[FileAPI.Camera] stop:', err);
+			}
 		},
 
 
@@ -3429,7 +3442,9 @@
 			ctx.drawImage(video, 0, 0, 1, 1);
 			res = ctx.getImageData(0, 0, 1, 1).data[4] != 255;
 		}
-		catch( e ){}
+		catch( err ){
+			api.log('[FileAPI.Camera] detectVideoSignal:', err);
+		}
 		return	res;
 	}
 

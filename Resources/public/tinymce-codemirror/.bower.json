@@ -1,11 +1,14 @@
 {
   "name": "tinymce-codemirror",
-  "_cacheHeaders": {
-    "Content-Type": "text/html; charset=utf-8"
+  "homepage": "https://github.com/christiaan/tinymce-codemirror",
+  "_release": "53ff1e895a",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "53ff1e895abe0a6d5d4211db5e96967288cc269a"
   },
-  "main": "index",
-  "_source": "https://github.com/christiaan/tinymce-codemirror",
+  "_source": "https://github.com/christiaan/tinymce-codemirror.git",
   "_target": "*",
-  "_originalSource": "https://github.com/christiaan/tinymce-codemirror",
+  "_originalSource": "https://github.com/christiaan/tinymce-codemirror.git",
   "_direct": true
 }

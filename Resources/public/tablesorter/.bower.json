@@ -30,5 +30,6 @@
   },
   "_source": "git://github.com/christianbach/tablesorter.git",
   "_target": "*",
-  "_originalSource": "tablesorter"
+  "_originalSource": "tablesorter",
+  "_direct": true
 }
