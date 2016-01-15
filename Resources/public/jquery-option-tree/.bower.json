@@ -1,11 +1,14 @@
 {
   "name": "jquery-option-tree",
-  "_cacheHeaders": {
-    "Content-Type": "text/html; charset=utf-8"
+  "homepage": "https://github.com/jongilbraith/jquery-option-tree",
+  "_release": "6b7137ec6e",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "6b7137ec6e14a323a2a4ea09e1ed5b0d6c028b93"
   },
-  "main": "index",
-  "_source": "https://github.com/jongilbraith/jquery-option-tree",
+  "_source": "https://github.com/jongilbraith/jquery-option-tree.git",
   "_target": "*",
-  "_originalSource": "https://github.com/jongilbraith/jquery-option-tree",
+  "_originalSource": "https://github.com/jongilbraith/jquery-option-tree.git",
   "_direct": true
 }
