@@ -23,6 +23,6 @@
     "commit": "894036ec6b35a0d6fe8ee1d4ae3642d43e7c15c6"
   },
   "_source": "git://github.com/systemjs/systemjs.git",
-  "_target": "^0.19.6",
+  "_target": "^0.19.16",
   "_originalSource": "system.js"
 }
