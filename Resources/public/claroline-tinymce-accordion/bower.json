@@ -1,0 +1,23 @@
+{
+  "name": "claroline-tinymce-accordion",
+  "version": "1.0.0",
+  "homepage": "https://github.com/iCAPLyon1/tinymceAccordionPlugin",
+  "authors": [
+    "Panos <ptsavdar@gmail.com>"
+  ],
+  "description": "Accordion plugin for tinymce editor for Claroline platform",
+  "main": "plugin.min.js",
+  "keywords": [
+    "accordion",
+    "tinymce",
+    "claroline"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
