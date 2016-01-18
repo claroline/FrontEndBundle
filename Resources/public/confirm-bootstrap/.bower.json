@@ -1,0 +1,14 @@
+{
+  "name": "confirm-bootstrap",
+  "homepage": "https://github.com/maxailloud/confirm-bootstrap",
+  "_release": "d436ee942d",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "d436ee942da5e3a96c8e9b2f6950156ba81a13e1"
+  },
+  "_source": "https://github.com/maxailloud/confirm-bootstrap.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/maxailloud/confirm-bootstrap.git",
+  "_direct": true
+}

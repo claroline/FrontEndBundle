@@ -1,0 +1,33 @@
+{
+  "name": "claroline-tinymce-mention",
+  "homepage": "https://github.com/iCAPLyon1/tinymceMentionPlugin",
+  "authors": [
+    "Panos <ptsavdar@gmail.com>"
+  ],
+  "description": "Tinymce mention plugin for Claroline platform",
+  "main": "plugin.min.js",
+  "moduleType": [],
+  "keywords": [
+    "mention",
+    "tinymce",
+    "claroline"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "f251a65c23",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "f251a65c239c0db1807096078426f75906cec302"
+  },
+  "_source": "https://github.com/iCAPLyon1/tinymceMentionPlugin.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/iCAPLyon1/tinymceMentionPlugin.git",
+  "_direct": true
+}
