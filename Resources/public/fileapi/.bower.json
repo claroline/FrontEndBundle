@@ -33,6 +33,6 @@
     "commit": "228a85d60c74693bfeb3822f87c090001bb03b78"
   },
   "_source": "git://github.com/mailru/FileAPI.git",
-  "_target": "^2.0.17",
+  "_target": "^2.0.18",
   "_originalSource": "fileapi"
 }

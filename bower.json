@@ -28,7 +28,7 @@
     "jquery.cookie": "^1.4.1",
     "mjolnic-bootstrap-colorpicker": "^2.3.0",
     "moment": "^2.11.1",
-    "select2": "^4.0.1",
+    "select2": "^3.5.0",
     "system.js": "^0.19.16",
     "tablesorter": "*",
     "tag-it": "*",
