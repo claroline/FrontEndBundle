@@ -1,84 +1,45 @@
-# typeahead.js-bootstrap3.less
+Typeahead.js and Bootstrap 3
+============================
 
-[![Bower version](https://badge.fury.io/bo/typeahead.js-bootstrap3.less.png)](http://badge.fury.io/bo/typeahead.js-bootstrap3.less)
-[![Build Status](https://travis-ci.org/hyspace/typeahead.js-bootstrap3.less.png?branch=develop)](https://travis-ci.org/hyspace/typeahead.js-bootstrap3.less)
+For Bootstrap 4 try [typeaheadjs.css](https://github.com/bassjobsen/typeahead.js-bootstrap4-css/)
 
-Bootstrap3 style for [typeahead.js](https://github.com/twitter/typeahead.js) using [Bootstrap 3](https://github.com/twbs/bootstrap/) mixins and variables.
+typeahead.js
+------------
+The [typeahead.js](https://github.com/twitter/typeahead.js) library consists of 2 components: the suggestion engine, Bloodhound, and the UI view, Typeahead. The suggestion engine is responsible for computing suggestions for a given query. The UI view is responsible for rendering suggestions and handling DOM interactions. Both components can be used separately, but when used together, they can provided a rich typeahead experience.
 
-Based on the solution of [@kuroe](https://github.com/kuroe)
+Bootstrap 3
+-----------
+Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development, created by [Mark Otto](http://twitter.com/mdo) and [Jacob Thornton](http://twitter.com/fat), and maintained by the [core team](https://github.com/twbs?tab=members) with the massive support and involvement of the community.
 
-Tested with PhantomJS and Chorme, with `Bootstrap 3.1.1` and `typeahead.js 0.10.2`
+To get started, check out <http://getbootstrap.com>!
 
-## version
+History
+-------
+With Twitter Bootstrap 3 the typeahead plugin had been dropped. [@mdo](http://twitter.com/mdo) says: "in favor of folks using [Twitter's typeahead](https://github.com/twitter/typeahead.js). Twitter's typeahead has more features than the old bootstrap-typeahead.js and less bugs." Twitter's typeahead don't work direct with Bootstrap 3. The DOM structure of the dropdown menu used by `typeahead.js` differs from the DOM structure of the Bootstrap dropdown menu. You'll need to load some additional CSS in order to get the `typeahead.js` dropdown menu to fit the default Bootstrap theme. You can download the basic CSS here, or use the LESS file to integrate it into your project. CSS and LESS are build with the latest LESS code of Bootstrap 3.1.0. Code does not introduce new mixins and only extends Bootstrap's LESS. If you search for a more extended version try: [typeahead.js-bootstrap3.less](https://github.com/hyspace/typeahead.js-bootstrap3.less/blob/master/typeahead.less).
 
-**For `typeahead.js` under `0.10.0`, use `0.1.x` instead.**
+Note also the [orginal typeahead plugin](https://github.com/bassjobsen/Bootstrap-3-Typeahead) still works with Bootstrap 3. 
 
-## changelog
+Download
+========
 
-###0.2.3
+ - Download the latest [typeaheadjs.css](https://github.com/bassjobsen/typeahead.js-bootstrap-css/blob/master/typeaheadjs.css) or [typeaheadjs.less](https://github.com/bassjobsen/typeahead.js-bootstrap-css/blob/master/typeaheadjs.less).
 
-bugfix
+How to use
+==========
 
-###0.2.2
+CSS
+---
+Include the CSS file after Bootstrap's CSS in your HTML:
 
-bugfix
+	<link href="bootstrap-3.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="typeaheadjs.css" rel="stylesheet">
 
-###0.2.1
-
-see [#6](https://github.com/hyspace/typeahead.js-bootstrap3.less/pull/6)
-
-`background-color` changed to `@dropdown-link-hover-bg` instead of `@dropdown-link-active-bg`
-
-###0.2.0
-
-`typeahead.js 0.10.0` has a big change, so does this less file.
-
-From `0.2.0` you should now uses `input-lg` or `input-sm` to contorl input sizes instead of using `input-group-lg` or `input-group-sm`. This is consistent with original `bootstrap`'s usage.
-
-**Notice: `.input-group` with no `.input-group-addon` is no longer supported. `input` in such `.input-group` will no longer have its `border-radius` set.**
-
-## Introduction
-
-This is a stylesheet for [typeahead.js](https://github.com/twitter/typeahead.js), which makes your "typeaheaded" input control looks same as [Bootstrap 3](https://github.com/twbs/bootstrap/)'s.
-
-Using mixins and variables provided by Boostrap 3, This stylesheet is useful when you applied custom theme to Boostrap for your site, because the change you made in variables and mixins will be applied to your "typeaheaded" input control automatically.
-
-**This stylesheet requires `mixins.less` and `variables.less` of Bootstrap 3. If you are not using Boostrap's mixins and variables in your site, you can use compiled css file with default colors and sizings of Boostrap instead.**
-
-## How to use
-
-install with bower: `bower install typeahead.js-bootstrap3.less`.
-
-see `example/example.html`
-
-#### -if you have less source files of Bootstrap in your project:
-
-import this file to your site's less stylesheet after `mixins.less` and `variables.less`
-
-example:
-
-    // variables and mixins of Bootstrap
-    @import "variables.less";
-    @import "mixins.less";
-
-    /* other Bootstrap or custom modules */
-
-    //typeahead
-    @import "typeahead.less";
-
-#### -if you have no less source files of Bootstrap in your project:
-
-link compiled css file to your site.
-
-## Thanks
-
-This repo is here because this [Issue](https://github.com/twitter/typeahead.js/issues/378), and is based on the solution of [@kuroe](http://jsfiddle.net/kuroe/qrtua/14/)
-
-Also thanks to contribution of
-@emrah
-@JoshAshby
-@jeffbowen
-
-## License
-
-Code released under [the MIT license](LICENSE)
+LESS
+----
+ 1. Copy typeaheadjs.less into your Bootstrap's LESS folder
+ 2. Import this file into bootstrap.less: `@import "typeaheadjs.less";`
+ 3. Recompile Bootstrap 
+ 
+Example
+-------
+![ScreenShot](https://raw.github.com/bassjobsen/typeahead.js-bootstrap-css/master/screenshot.png)

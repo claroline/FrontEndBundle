@@ -4,7 +4,7 @@
   "homepage": "http://claroline.net",
   "dependencies": {
     "angular": "^1.4.8",
-    "angular-bootstrap": "^0.14.3",
+    "angular-bootstrap": "^1.0.3",
     "angular-data-table": "^0.4.13",
     "angular-ui-select": "^0.13.2",
     "angular-ui-tree": "^2.13.0",
@@ -33,9 +33,9 @@
     "tablesorter": "*",
     "tag-it": "*",
     "tinymce-codemirror": "https://github.com/christiaan/tinymce-codemirror.git",
+    "typeahead.js-bootstrap3.less": "https://github.com/bassjobsen/typeahead.js-bootstrap-css.git#^1.2.1",
     "toastr": "^2.1.2",
-    "typeahead.js": "~0.10.5",
-    "typeahead.js-bootstrap3.less": "^0.2.3",
+    "typeahead.js": "^0.11.1",
     "underscore": "^1.8.3"
   }
 }
