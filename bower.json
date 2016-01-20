@@ -28,14 +28,14 @@
     "jquery.cookie": "^1.4.1",
     "mjolnic-bootstrap-colorpicker": "^2.3.0",
     "moment": "^2.11.1",
-    "select2": "^4.0.1",
+    "select2": "^3.5.0",
     "system.js": "^0.19.16",
     "tablesorter": "*",
     "tag-it": "*",
     "tinymce-codemirror": "https://github.com/christiaan/tinymce-codemirror.git",
     "typeahead.js-bootstrap3.less": "https://github.com/bassjobsen/typeahead.js-bootstrap-css.git#^1.2.1",
     "toastr": "^2.1.2",
-    "typeahead.js": "~^0.11.1",
+    "typeahead.js": "^0.11.1",
     "underscore": "^1.8.3"
   }
 }
