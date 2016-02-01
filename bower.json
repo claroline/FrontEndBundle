@@ -3,7 +3,7 @@
   "description": "Third-party front-end dependencies for Claroline",
   "homepage": "http://claroline.net",
   "dependencies": {
-    "angular": "^1.4.8",
+    "angular": "^1.4.9",
     "angular-route": "^1.4.0",
     "angular-bootstrap": "^1.0.3",
     "angular-data-table": "^0.4.13",
@@ -13,6 +13,8 @@
     "angular-ui-resource-picker": "^1.0.0",
     "angular-ui-tinymce": "^0.0.12",
     "backbone": "^1.2.3",
+    "bootstrap": "^3.3.6",
+    "bootstrapaccessibilityplugin": "*",
     "bootstrap-datepicker": "^1.5.1",
     "bootstrap-daterangepicker": "^2.1.17",
     "claroline-tinymce-accordion": "https://github.com/iCAPLyon1/tinymceAccordionPlugin.git",
@@ -22,6 +24,7 @@
     "eonasdan-bootstrap-datetimepicker": "^4.17.37",
     "fileapi": "^2.0.18",
     "fluidvids": "^2.4.1",
+    "font-awesome": "fontawesome#~4.5.0",
     "fullcalendar": "^2.4.0",
     "gridstack": "^0.2.3",
     "jqPlot": "https://github.com/jqPlot/jqPlot.git",
@@ -40,7 +43,6 @@
     "typeahead.js-bootstrap3.less": "https://github.com/bassjobsen/typeahead.js-bootstrap-css.git#^1.2.1",
     "toastr": "^2.1.2",
     "typeahead.js": "^0.11.1",
-    "underscore": "^1.8.3",
-    "bootstrapaccessibilityplugin": "*"
+    "underscore": "^1.8.3"
   }
 }

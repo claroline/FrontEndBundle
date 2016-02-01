@@ -1,0 +1,14 @@
+{
+  "name": "angular-ui-resource-picker",
+  "homepage": "https://github.com/InnovaLangues/angular-ui-resource-picker",
+  "version": "1.0.0",
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.0",
+    "commit": "8dc6cfb0d4052d0d0533383ff69876cd3fefb029"
+  },
+  "_source": "git://github.com/InnovaLangues/angular-ui-resource-picker.git",
+  "_target": "^1.0.0",
+  "_originalSource": "angular-ui-resource-picker"
+}
