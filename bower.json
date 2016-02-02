@@ -12,6 +12,8 @@
     "angular-ui-translation": "^1.0.0",
     "angular-ui-resource-picker": "^1.0.0",
     "angular-ui-tinymce": "^0.0.12",
+    "angular-ui-router": "^0.2",
+    "angular-breadcrumb": "~0.4",
     "backbone": "^1.2.3",
     "bootstrap": "^3.3.6",
     "bootstrapaccessibilityplugin": "*",
