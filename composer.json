@@ -3,12 +3,11 @@
     "description": "Front-end dependencies bundle for Claroline 2.0",
     "license": "GPL-3.0+",
     "require": {
-        "php": ">=5.3.3",
+        "php": ">=5.5",
         "symfony/framework-bundle": "~2.0",
         "claroline/kernel-bundle": "*"
     },
     "autoload": {
-        "psr-0": { "Claroline\\Bundle\\FrontEndBundle": "" }
-    },
-    "target-dir": "Claroline/Bundle/FrontEndBundle"
+        "psr-4": { "Claroline\\Bundle\\FrontEndBundle\\": "" }
+    }
 }
