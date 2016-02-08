@@ -5,6 +5,7 @@
   "dependencies": {
     "angular": "^1.4.9",
     "angular-route": "^1.4.0",
+    "angular-sanitize": "~1.4.*",
     "angular-bootstrap": "^1.0.3",
     "angular-data-table": "^0.4.13",
     "angular-ui-select": "^0.13.2",
