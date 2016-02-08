@@ -43,11 +43,11 @@
     if (!amd) {
       try {
         result = require('fs').realpathSync(result);
-      } catch(e) {}
+      } catch (e) {}
 
       try {
         result = require.resolve(result);
-      } catch(e) {}
+      } catch (e) {}
     }
     return result;
   }());
@@ -109,7 +109,7 @@
 
   /** Load Benchmark.js. */
   var Benchmark = root.Benchmark || (root.Benchmark = (
-    Benchmark = load('../vendor/benchmark.js/benchmark.js') || root.Benchmark,
+    Benchmark = load('../node_modules/benchmark/benchmark.js') || root.Benchmark,
     Benchmark = Benchmark.Benchmark || Benchmark,
     Benchmark.runInContext(lodash.extend({}, root, { '_': lodash }))
   ));

@@ -639,6 +639,17 @@
     assert.strictEqual(_.isString(1), false);
   });
 
+  QUnit.test('isSymbol', function(assert) {
+    assert.ok(!_.isSymbol(0), 'numbers are not symbols');
+    assert.ok(!_.isSymbol(''), 'strings are not symbols');
+    assert.ok(!_.isSymbol(_.isSymbol), 'functions are not symbols');
+    if (typeof Symbol === 'function') {
+      assert.ok(_.isSymbol(Symbol()), 'symbols are symbols');
+      assert.ok(_.isSymbol(Symbol('description')), 'described symbols are symbols');
+      assert.ok(_.isSymbol(Object(Symbol())), 'boxed symbols are symbols');
+    }
+  });
+
   QUnit.test('isNumber', function(assert) {
     assert.ok(!_.isNumber('string'), 'a string is not a number');
     assert.ok(!_.isNumber(arguments), 'the arguments object is not a number');
@@ -717,6 +728,11 @@
     assert.ok(_.isFinite(0), '0 is finite');
     assert.ok(_.isFinite(123), 'Ints are finite');
     assert.ok(_.isFinite(-12.44), 'Floats are finite');
+    if (typeof Symbol === 'function') {
+      assert.ok(!_.isFinite(Symbol()), 'symbols are not numbers');
+      assert.ok(!_.isFinite(Symbol('description')), 'described symbols are not numbers');
+      assert.ok(!_.isFinite(Object(Symbol())), 'boxed symbols are not numbers');
+    }
   });
 
   QUnit.test('isNaN', function(assert) {
