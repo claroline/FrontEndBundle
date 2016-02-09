@@ -31,6 +31,6 @@
     "commit": "74a710047e4947decd3f3a6ca14bee92429b0b51"
   },
   "_source": "git://github.com/johnny/jquery-sortable.git",
-  "_target": "^0.9.13",
+  "_target": "0.9.13",
   "_originalSource": "jquery-sortable"
 }

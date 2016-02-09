@@ -3,11 +3,10 @@
   "homepage": "https://github.com/christiaan/tinymce-codemirror",
   "_release": "20c1bbe708",
   "_resolution": {
-    "type": "branch",
-    "branch": "master",
-    "commit": "20c1bbe7085d74ece681e960135d5cc368cd3937"
+    "type": "commit",
+    "commit": "20c1bbe708"
   },
   "_source": "https://github.com/christiaan/tinymce-codemirror.git",
-  "_target": "*",
+  "_target": "20c1bbe708",
   "_originalSource": "https://github.com/christiaan/tinymce-codemirror.git"
 }

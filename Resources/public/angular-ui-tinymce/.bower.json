@@ -29,6 +29,6 @@
     "commit": "1319e137ba1825c5419569406890b05c07a934b9"
   },
   "_source": "git://github.com/angular-ui/ui-tinymce.git",
-  "_target": "^0.0.12",
+  "_target": "0.0.12",
   "_originalSource": "angular-ui-tinymce"
 }

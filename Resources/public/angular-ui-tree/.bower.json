@@ -53,6 +53,6 @@
     "commit": "7e817662b386166d15fc254f8f09aeaca4a50c8a"
   },
   "_source": "git://github.com/JimLiu/angular-ui-tree.git",
-  "_target": "^2.13.0",
+  "_target": "2.15.0",
   "_originalSource": "angular-ui-tree"
 }
