@@ -1,5 +1,5 @@
 /*
- * SystemJS v0.19.16
+ * SystemJS v0.19.20
  */
 (function(__global) {
 
@@ -963,10 +963,12 @@ function applyPaths(paths, name) {
 
     // exact path match
     if (pathParts.length == 1) {
-      if (name == p) {
-        pathMatch = p;
-        break;
-      }
+      if (name == p)
+        return paths[p];
+      
+      // support trailing / in paths rules
+      else if (name.substr(0, p.length - 1) == p.substr(0, p.length - 1) && (name.length < p.length || name[p.length - 1] == p[p.length - 1]) && paths[p][paths[p].length - 1] == '/')
+        return paths[p].substr(0, paths[p].length - 1) + (name.length > p.length ? '/' + name.substr(p.length) : '');
     }
     // wildcard path match
     else {
@@ -1255,7 +1257,7 @@ function warn(msg) {
     return function(load) {
       var loader = this;
 
-      if (!load.metadata.scriptLoad || (!isBrowser && !isWorker))
+      if (load.metadata.format == 'json' || !load.metadata.scriptLoad || (!isBrowser && !isWorker))
         return fetch.call(this, load);
 
       if (isWorker)
@@ -1395,7 +1397,7 @@ function warn(msg) {
  *
  */
 
-var leadingCommentAndMetaRegEx = /^\s*(\/\*[^\*]*(\*(?!\/)[^\*]*)*\*\/|\s*\/\/[^\n]*|\s*"[^"]+"\s*;?|\s*'[^']+'\s*;?)*\s*/;
+var leadingCommentAndMetaRegEx = /^(\s*\/\*[^\*]*(\*(?!\/)[^\*]*)*\*\/|\s*\/\/[^\n]*|\s*"[^"]+"\s*;?|\s*'[^']+'\s*;?)*\s*/;
 function detectRegisterFormat(source) {
   var leadingCommentAndMeta = source.match(leadingCommentAndMetaRegEx);
   return leadingCommentAndMeta && source.substr(leadingCommentAndMeta[0].length, 15) == 'System.register';
@@ -1635,7 +1637,7 @@ function createEntry() {
 
       module.locked = false;
       return value;
-    }, entry.name);
+    }, { id: entry.name });
     
     module.setters = declaration.setters;
     module.execute = declaration.execute;
@@ -1817,9 +1819,6 @@ function createEntry() {
         load.metadata.format = 'defined';
         return '';
       }
-      
-      if (load.metadata.format == 'register' && !load.metadata.authorization && load.metadata.scriptLoad !== false)
-        load.metadata.scriptLoad = true;
 
       load.metadata.deps = load.metadata.deps || [];
       
@@ -1966,10 +1965,36 @@ function createEntry() {
   hook('locate', function(locate) {
     return function(load) {
       var loader = this;
+      var matched = false;
 
       if (!(load.name in loader.defined))
         for (var b in loader.bundles) {
-          if (loader.bundles[b].indexOf(load.name) != -1)
+          for (var i = 0; i < loader.bundles[b].length; i++) {
+            var curModule = loader.bundles[b][i];
+
+            if (curModule == load.name) {
+              matched = true;
+              break;
+            }
+
+            // wildcard in bundles does not include / boundaries
+            if (curModule.indexOf('*') != -1) {
+              var parts = curModule.split('*');
+              if (parts.length != 2) {
+                loader.bundles[b].splice(i--, 1);
+                continue;
+              }
+              
+              if (load.name.substring(0, parts[0].length) == parts[0] &&
+                  load.name.substr(load.name.length - parts[1].length, parts[1].length) == parts[1] &&
+                  load.name.substr(parts[0].length, load.name.length - parts[1].length - parts[0].length).indexOf('/') == -1) {
+                matched = true;
+                break;
+              }
+            }
+          }
+
+          if (matched)
             return loader['import'](b)
             .then(function() {
               return locate.call(loader, load);
@@ -2002,7 +2027,7 @@ hook('fetch', function(fetch) {
 });System = new SystemJSLoader();
 
 __global.SystemJS = System;
-System.version = '0.19.16 Register Only';
+System.version = '0.19.20 Register Only';
   // -- exporting --
 
   if (typeof exports === 'object')
