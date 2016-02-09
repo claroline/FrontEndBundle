@@ -24,12 +24,10 @@
   ],
   "_release": "774576308e",
   "_resolution": {
-    "type": "branch",
-    "branch": "master",
-    "commit": "774576308e8a25aa9d68b7fe3069b79543992d7a"
+    "type": "commit",
+    "commit": "774576308e"
   },
   "_source": "git://github.com/christianbach/tablesorter.git",
-  "_target": "*",
-  "_originalSource": "tablesorter",
-  "_direct": true
+  "_target": "774576308e",
+  "_originalSource": "tablesorter"
 }

@@ -9,6 +9,6 @@
     "commit": "376b5848f75ab9846589ac268bb97c3ee3807dca"
   },
   "_source": "git://github.com/InnovaLangues/angular-ui-translation.git",
-  "_target": "^1.0.0",
+  "_target": "1.0.0",
   "_originalSource": "angular-ui-translation"
 }

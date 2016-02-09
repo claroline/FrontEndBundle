@@ -36,6 +36,6 @@
     "commit": "9c2f559ece421be0e5f0743c0a7588970403c8fb"
   },
   "_source": "git://github.com/Swimlane/angular-data-table.git",
-  "_target": "^0.4.13",
+  "_target": "0.4.14",
   "_originalSource": "angular-data-table"
 }

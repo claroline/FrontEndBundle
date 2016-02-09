@@ -21,12 +21,10 @@
   ],
   "_release": "192df9058a",
   "_resolution": {
-    "type": "branch",
-    "branch": "master",
-    "commit": "192df9058abd26c84af916efd731622e4cfae823"
+    "type": "commit",
+    "commit": "192df9058a"
   },
   "_source": "https://github.com/iCAPLyon1/tinymceAccordionPlugin.git",
-  "_target": "*",
-  "_originalSource": "https://github.com/iCAPLyon1/tinymceAccordionPlugin.git",
-  "_direct": true
+  "_target": "192df9058a",
+  "_originalSource": "https://github.com/iCAPLyon1/tinymceAccordionPlugin.git"
 }

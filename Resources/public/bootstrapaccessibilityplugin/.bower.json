@@ -30,6 +30,6 @@
     "commit": "966a7e1b6113c15c1a5a9ea9ac017a24b7eeb9ee"
   },
   "_source": "git://github.com/paypal/bootstrap-accessibility-plugin.git",
-  "_target": "*",
+  "_target": "1.0.4",
   "_originalSource": "bootstrapaccessibilityplugin"
 }

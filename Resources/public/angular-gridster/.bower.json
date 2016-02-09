@@ -36,6 +36,6 @@
     "commit": "281de99fa8faf744ddf78ebb517ae1f265a4fe7a"
   },
   "_source": "git://github.com/ManifestWebDesign/angular-gridster.git",
-  "_target": "^0.13.5",
+  "_target": "0.13.5",
   "_originalSource": "angular-gridster"
 }

@@ -41,6 +41,6 @@
     "commit": "05ff3f37d680cc0c546ef74f97d8a7e18dd55a05"
   },
   "_source": "git://github.com/fragaria/angular-daterangepicker.git",
-  "_target": "^0.2.2",
+  "_target": "0.2.2",
   "_originalSource": "angular-daterangepicker"
 }
